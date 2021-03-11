@@ -7,42 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67f9d5de-1d1c-4b09-879f-44fe21ffd1bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/source_gen/WrapperDSL/sandbox/MoveAside.aj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/structure/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/structure/aspectcps-descriptorclasses.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/ExceptionalScenario_TextGen.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/ExceptionalScenario_TextGen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/RelativeDistanceConditionalExpression_TextGen$PROPS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/RelativeDistanceConditionalExpression_TextGen$PROPS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/RelativeDistanceConditionalExpression_TextGen.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/RelativeDistanceConditionalExpression_TextGen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/WindDirectionConditionalExpression_TextGen$PROPS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/WindDirectionConditionalExpression_TextGen$PROPS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/WindDirectionConditionalExpression_TextGen.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/WindDirectionConditionalExpression_TextGen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/aspectcps-descriptorclasses.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/transformationOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/classes_gen/WrapperDSL/textGen/transformationOperations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/models/WrapperDSL.structure.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/models/WrapperDSL.structure.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/models/WrapperDSL.textGen.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/models/WrapperDSL.textGen.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/classes_gen/WrapperDSL/sandbox/EmergencyCamera.aj" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/classes_gen/WrapperDSL/sandbox/EmergencyCamera.aj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/classes_gen/WrapperDSL/sandbox/Keepflying.aj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/classes_gen/WrapperDSL/sandbox/MonitorEnvironment.aj" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/classes_gen/WrapperDSL/sandbox/MonitorEnvironment.aj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/classes_gen/WrapperDSL/sandbox/Move Aside.aj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/classes_gen/WrapperDSL/sandbox/SafeRTH.aj" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/classes_gen/WrapperDSL/sandbox/SafeRTH.aj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/classes_gen/WrapperDSL/sandbox/SwitchToManual.aj" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/classes_gen/WrapperDSL/sandbox/SwitchToManual.aj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/models/WrapperDSL.sandbox.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/models/WrapperDSL.sandbox.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/source_gen.caches/WrapperDSL/sandbox/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/source_gen.caches/WrapperDSL/sandbox/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/source_gen/WrapperDSL/sandbox/EmergencyCamera.aj" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/source_gen/WrapperDSL/sandbox/EmergencyCamera.aj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/source_gen/WrapperDSL/sandbox/Keepflying.aj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/source_gen/WrapperDSL/sandbox/MonitorEnvironment.aj" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/source_gen/WrapperDSL/sandbox/MonitorEnvironment.aj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/source_gen/WrapperDSL/sandbox/Move Aside.aj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/source_gen/WrapperDSL/sandbox/SafeRTH.aj" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/source_gen/WrapperDSL/sandbox/SafeRTH.aj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/source_gen/WrapperDSL/sandbox/SwitchToManual.aj" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/sandbox/source_gen/WrapperDSL/sandbox/SwitchToManual.aj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/source_gen.caches/WrapperDSL/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/source_gen.caches/WrapperDSL/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/source_gen.caches/WrapperDSL/structure/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/source_gen.caches/WrapperDSL/structure/generated" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/source_gen.caches/WrapperDSL/textGen/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/source_gen.caches/WrapperDSL/textGen/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/structure/EnumerationDescriptor_GeneralOperatorEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/structure/EnumerationDescriptor_GeneralOperatorEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/structure/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/structure/aspectcps-descriptorclasses.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/textGen/ExceptionalScenario_TextGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/textGen/ExceptionalScenario_TextGen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/textGen/RelativeDistanceConditionalExpression_TextGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/textGen/RelativeDistanceConditionalExpression_TextGen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/textGen/While_TextGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/textGen/While_TextGen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/textGen/WindDirectionConditionalExpression_TextGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/textGen/WindDirectionConditionalExpression_TextGen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/textGen/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/textGen/aspectcps-descriptorclasses.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/textGen/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/textGen/trace.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/textGen/transformationOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/WrapperDSL/source_gen/WrapperDSL/textGen/transformationOperations.java" afterDir="false" />
@@ -226,8 +196,20 @@
               <option name="myItemId" value="WrapperDSL" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:2cb78c7c-c192-47c0-ae08-cf53d23996c9(WrapperDSL.sandbox) in IdeaFile[path: C:/Users/naty-/Projetos/dres-ml/DSL-Dragonfly/languages/WrapperDSL/sandbox/models/WrapperDSL.sandbox.mps]" />
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a553a0f8-13de-431b-9df4-f626a3ec4dda" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -244,20 +226,8 @@
               <option name="myItemId" value="WrapperDSL" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="a553a0f8-13de-431b-9df4-f626a3ec4dda" />
+              <option name="myItemId" value="r:2cb78c7c-c192-47c0-ae08-cf53d23996c9(WrapperDSL.sandbox) in IdeaFile[path: C:/Users/naty-/Projetos/dres-ml/DSL-Dragonfly/languages/WrapperDSL/sandbox/models/WrapperDSL.sandbox.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>

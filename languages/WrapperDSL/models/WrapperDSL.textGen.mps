@@ -390,7 +390,7 @@
         <node concept="lc7rE" id="7eBxH1ZQSl5" role="3cqZAp">
           <ref role="2dFDx7" node="IyLDsSFJbY" resolve="advice" />
           <node concept="la8eA" id="7eBxH1ZQSqJ" role="lcghm">
-            <property role="lacIc" value="        )" />
+            <property role="lacIc" value="            )" />
           </node>
           <node concept="l8MVK" id="7eBxH1ZQStu" role="lcghm" />
         </node>
@@ -944,7 +944,7 @@
         </node>
         <node concept="lc7rE" id="7eBxH1ZQP59" role="3cqZAp">
           <node concept="la8eA" id="7eBxH1ZQPa$" role="lcghm">
-            <property role="lacIc" value="            (((Drone)thisJoinPoint.getArgs()[0]).getWrapperId()== )\n            &amp;&amp;\n" />
+            <property role="lacIc" value="            (((Drone)thisJoinPoint.getArgs()[0]).getWrapperId() == )\n            &amp;&amp;\n" />
           </node>
         </node>
       </node>
@@ -2330,7 +2330,7 @@
                   <property role="TrG5h" value="finalExpression" />
                   <node concept="17QB3L" id="7goH6Gfm86q" role="1tU5fm" />
                   <node concept="Xl_RD" id="7goH6Gfm4LJ" role="33vP2m">
-                    <property role="Xl_RC" value="            (((Drone)thisJoinPoint.getArgs()[0]).getDistanceDestiny()" />
+                    <property role="Xl_RC" value="            (((Drone)thisJoinPoint.getArgs()[0]).getDistanceDestiny() " />
                   </node>
                 </node>
               </node>

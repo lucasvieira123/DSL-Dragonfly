@@ -1709,7 +1709,7 @@
               <ref role="37wK5l" to="kpbf:~TextGenSupport.append(java.lang.CharSequence)" resolve="append" />
               <uo k="s:originTrace" v="n:8333777865528805039" />
               <node concept="Xl_RD" id="6V" role="37wK5m">
-                <property role="Xl_RC" value="        )" />
+                <property role="Xl_RC" value="            )" />
                 <uo k="s:originTrace" v="n:8333777865528805039" />
               </node>
             </node>
@@ -4847,7 +4847,7 @@
                     <uo k="s:originTrace" v="n:8365634679752655258" />
                   </node>
                   <node concept="Xl_RD" id="kk" role="33vP2m">
-                    <property role="Xl_RC" value="            (((Drone)thisJoinPoint.getArgs()[0]).getDistanceDestiny()" />
+                    <property role="Xl_RC" value="            (((Drone)thisJoinPoint.getArgs()[0]).getDistanceDestiny() " />
                     <uo k="s:originTrace" v="n:8365634679752641647" />
                   </node>
                 </node>
@@ -8174,7 +8174,7 @@
               <ref role="37wK5l" to="kpbf:~TextGenSupport.append(java.lang.CharSequence)" resolve="append" />
               <uo k="s:originTrace" v="n:8333777865528791716" />
               <node concept="Xl_RD" id="$n" role="37wK5m">
-                <property role="Xl_RC" value="            (((Drone)thisJoinPoint.getArgs()[0]).getWrapperId()== )\n            &amp;&amp;\n" />
+                <property role="Xl_RC" value="            (((Drone)thisJoinPoint.getArgs()[0]).getWrapperId() == )\n            &amp;&amp;\n" />
                 <uo k="s:originTrace" v="n:8333777865528791716" />
               </node>
             </node>

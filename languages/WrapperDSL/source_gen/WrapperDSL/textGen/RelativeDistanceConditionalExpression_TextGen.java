@@ -22,7 +22,7 @@ public class RelativeDistanceConditionalExpression_TextGen extends TextGenDescri
     } else if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.relativePosition$O3mL) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x7970d3ea933fec04L, "WrapperDSL.structure.RelativePositionEnum"), 0x7970d3ea933fec05L, "DESTINATION")) {
       int value = SPropertyOperations.getInteger(ctx.getPrimaryInput(), PROPS.value$OPl6);
       int newValue = (30 * value) / 1000;
-      String finalExpression = "            (((Drone)thisJoinPoint.getArgs()[0]).getDistanceDestiny()";
+      String finalExpression = "            (((Drone)thisJoinPoint.getArgs()[0]).getDistanceDestiny() ";
       finalExpression = finalExpression + SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.operator$O8K8).toString() + newValue + ")";
       tgs.append(finalExpression);
       tgs.append(" //1000 m -> 30 pix");

@@ -53,7 +53,7 @@ public abstract class transformationOperations {
     tgs.append("            && if\n");
     tgs.append("            (");
     tgs.newLine();
-    tgs.append("            (((Drone)thisJoinPoint.getArgs()[0]).getWrapperId()== )\n            &&\n");
+    tgs.append("            (((Drone)thisJoinPoint.getArgs()[0]).getWrapperId() == )\n            &&\n");
   }
   public static void printExceptionalScenarioInLog(SNode exceptionalScenario, final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);

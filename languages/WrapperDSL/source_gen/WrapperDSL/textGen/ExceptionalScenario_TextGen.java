@@ -63,7 +63,7 @@ public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
     tgs.append("\n");
     tgs.popTextArea();
     tgs.pushTextArea("advice");
-    tgs.append("        )");
+    tgs.append("            )");
     tgs.newLine();
     tgs.popTextArea();
     tgs.pushTextArea("advice");
