@@ -335,7 +335,7 @@
         <node concept="lc7rE" id="1OCskmtZbOO" role="3cqZAp">
           <ref role="2dFDx7" node="IyLDsS_eRV" resolve="HEADER" />
           <node concept="la8eA" id="1OCskmtZbXN" role="lcghm">
-            <property role="lacIc" value="    private boolean alreadyExecuting = false;" />
+            <property role="lacIc" value="    private boolean alreadyExecuting;" />
             <property role="ldcpH" value="true" />
           </node>
           <node concept="l8MVK" id="1OCskmtZc1j" role="lcghm" />
@@ -387,6 +387,13 @@
             <property role="lacIc" value="\n" />
           </node>
         </node>
+        <node concept="lc7rE" id="7eBxH1ZQSl5" role="3cqZAp">
+          <ref role="2dFDx7" node="IyLDsSFJbY" resolve="advice" />
+          <node concept="la8eA" id="7eBxH1ZQSqJ" role="lcghm">
+            <property role="lacIc" value="        )" />
+          </node>
+          <node concept="l8MVK" id="7eBxH1ZQStu" role="lcghm" />
+        </node>
         <node concept="lc7rE" id="IyLDsSVKzc" role="3cqZAp">
           <ref role="2dFDx7" node="IyLDsSFJbY" resolve="advice" />
           <node concept="la8eA" id="IyLDsSVK_V" role="lcghm">
@@ -425,7 +432,7 @@
             <node concept="lc7rE" id="1OCskmtFZxE" role="3cqZAp">
               <ref role="2dFDx7" node="IyLDsSFJbY" resolve="advice" />
               <node concept="la8eA" id="1OCskmtFZyc" role="lcghm">
-                <property role="lacIc" value="return false;" />
+                <property role="lacIc" value="        return false;" />
               </node>
               <node concept="l8MVK" id="1OCskmtFZ$u" role="lcghm" />
             </node>
@@ -540,8 +547,15 @@
         <node concept="lc7rE" id="IyLDsSX4Nh" role="3cqZAp">
           <ref role="2dFDx7" node="IyLDsSX4UC" resolve="methodAdvice" />
           <node concept="la8eA" id="IyLDsSX4Ni" role="lcghm">
-            <property role="lacIc" value="}\n" />
+            <property role="lacIc" value="    }\n" />
           </node>
+        </node>
+        <node concept="lc7rE" id="7eBxH1ZQqOC" role="3cqZAp">
+          <ref role="2dFDx7" node="IyLDsSX4UC" resolve="methodAdvice" />
+          <node concept="la8eA" id="7eBxH1ZQqUf" role="lcghm">
+            <property role="lacIc" value="}" />
+          </node>
+          <node concept="l8MVK" id="7eBxH1ZQqV6" role="lcghm" />
         </node>
         <node concept="3clFbH" id="IyLDsSX4yR" role="3cqZAp" />
       </node>
@@ -599,9 +613,6 @@
       <property role="TrG5h" value="whenToPointcut" />
       <node concept="3cqZAl" id="IyLDsSFkiW" role="3clF45" />
       <node concept="3clFbS" id="IyLDsSFkiX" role="3clF47">
-        <node concept="3clFbH" id="bX1fLeK9ph" role="3cqZAp" />
-        <node concept="3clFbH" id="bX1fLeK9pV" role="3cqZAp" />
-        <node concept="3clFbH" id="bX1fLeK9qA" role="3cqZAp" />
         <node concept="3clFbJ" id="IyLDsSFkSd" role="3cqZAp">
           <node concept="3clFbS" id="IyLDsSFkSf" role="3clFbx">
             <node concept="lc7rE" id="IyLDsSFlqx" role="3cqZAp">
@@ -627,7 +638,7 @@
           </node>
           <node concept="3eNFk2" id="20lP6cvi7o6" role="3eNLev">
             <node concept="3clFbS" id="20lP6cvi7o8" role="3eOfB_">
-              <node concept="1X3_iC" id="20lP6cvibS9" role="lGtFl">
+              <node concept="1X3_iC" id="6vWFNG2jTQu" role="lGtFl">
                 <property role="3V$3am" value="statement" />
                 <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
                 <node concept="3cpWs8" id="20lP6cvibE9" role="8Wnug">
@@ -824,7 +835,7 @@
           <node concept="3clFbS" id="1OCskmt_8k7" role="3clFbx">
             <node concept="lc7rE" id="1OCskmt_9NQ" role="3cqZAp">
               <node concept="la8eA" id="1OCskmt_9Yo" role="lcghm">
-                <property role="lacIc" value="boolean " />
+                <property role="lacIc" value="    boolean " />
               </node>
               <node concept="l9hG8" id="1OCskmt_9NR" role="lcghm">
                 <node concept="2OqwBi" id="1OCskmt_9NS" role="lb14g">
@@ -908,7 +919,7 @@
                   </node>
                 </node>
                 <node concept="la8eA" id="IyLDsSSfAR" role="lcghm">
-                  <property role="lacIc" value="():" />
+                  <property role="lacIc" value="(): " />
                 </node>
                 <node concept="l9hG8" id="IyLDsSShLg" role="lcghm">
                   <node concept="37vLTw" id="IyLDsSShMQ" role="lb14g">
@@ -923,6 +934,17 @@
         <node concept="lc7rE" id="IyLDsSShOA" role="3cqZAp">
           <node concept="la8eA" id="IyLDsSShQ0" role="lcghm">
             <property role="lacIc" value="            &amp;&amp; if\n" />
+          </node>
+        </node>
+        <node concept="lc7rE" id="7eBxH1ZQRDW" role="3cqZAp">
+          <node concept="la8eA" id="7eBxH1ZQRGQ" role="lcghm">
+            <property role="lacIc" value="            (" />
+          </node>
+          <node concept="l8MVK" id="7eBxH1ZQRNt" role="lcghm" />
+        </node>
+        <node concept="lc7rE" id="7eBxH1ZQP59" role="3cqZAp">
+          <node concept="la8eA" id="7eBxH1ZQPa$" role="lcghm">
+            <property role="lacIc" value="            (((Drone)thisJoinPoint.getArgs()[0]).getWrapperId()== )\n            &amp;&amp;\n" />
           </node>
         </node>
       </node>
@@ -992,7 +1014,7 @@
           </node>
           <node concept="3KbdKl" id="1E9PaQYxRQu" role="3KbHQx">
             <node concept="Xl_RD" id="1E9PaQYxRQN" role="3Kbmr1">
-              <property role="Xl_RC" value="is" />
+              <property role="Xl_RC" value="equal" />
             </node>
             <node concept="3clFbS" id="1E9PaQYxRQw" role="3Kbo56">
               <node concept="lc7rE" id="1E9PaQYxRRf" role="3cqZAp">
@@ -1005,7 +1027,7 @@
           </node>
           <node concept="3KbdKl" id="1E9PaQYxRRR" role="3KbHQx">
             <node concept="Xl_RD" id="1E9PaQYxRSP" role="3Kbmr1">
-              <property role="Xl_RC" value="not is" />
+              <property role="Xl_RC" value="different" />
             </node>
             <node concept="3clFbS" id="1E9PaQYxRRT" role="3Kbo56">
               <node concept="lc7rE" id="1E9PaQYxRTl" role="3cqZAp">
@@ -1924,7 +1946,7 @@
         </node>
         <node concept="lc7rE" id="P_N_RPCV4y" role="3cqZAp">
           <node concept="la8eA" id="P_N_RPCV5K" role="lcghm">
-            <property role="lacIc" value="    };" />
+            <property role="lacIc" value="        };" />
           </node>
           <node concept="l8MVK" id="P_N_RPCV6_" role="lcghm" />
         </node>
@@ -1965,7 +1987,7 @@
       <node concept="3clFbS" id="593$Jq561iU" role="2VODD2">
         <node concept="lc7rE" id="593$Jq561jb" role="3cqZAp">
           <node concept="la8eA" id="1E9PaQYrz$7" role="lcghm">
-            <property role="lacIc" value="((Drone)thisJoinPoint.getArgs()[0]).getWindDirection()" />
+            <property role="lacIc" value="            (((Drone)thisJoinPoint.getArgs()[0]).getWindDirection() " />
           </node>
           <node concept="1bDJIP" id="1E9PaQYyytW" role="lcghm">
             <ref role="1rvKf6" node="1E9PaQYxRN8" resolve="transformOperator" />
@@ -1982,7 +2004,7 @@
             </node>
           </node>
           <node concept="la8eA" id="1E9PaQYr$bv" role="lcghm">
-            <property role="lacIc" value="DirectionEnum." />
+            <property role="lacIc" value=" DirectionEnum." />
           </node>
           <node concept="l9hG8" id="1E9PaQYr$ex" role="lcghm">
             <node concept="2OqwBi" id="1E9PaQYze7B" role="lb14g">
@@ -2001,6 +2023,9 @@
                 <ref role="37wK5l" to="wyt6:~String.toUpperCase()" resolve="toUpperCase" />
               </node>
             </node>
+          </node>
+          <node concept="la8eA" id="6vWFNG2jQ2G" role="lcghm">
+            <property role="lacIc" value=")" />
           </node>
         </node>
       </node>
@@ -2247,8 +2272,7 @@
                 </node>
               </node>
             </node>
-            <node concept="3clFbH" id="bX1fLeLIUb" role="3cqZAp" />
-            <node concept="3clFbH" id="bX1fLeLI3R" role="3cqZAp" />
+            <node concept="3clFbH" id="6vWFNG2j_QH" role="3cqZAp" />
           </node>
           <node concept="3clFbC" id="bX1fLeLBEf" role="3clFbw">
             <node concept="2OqwBi" id="bX1fLeLCMI" role="3uHU7w">
@@ -2349,7 +2373,11 @@
                     <ref role="3cqZAo" node="7goH6Gfm4IV" resolve="finalExpression" />
                   </node>
                 </node>
+                <node concept="la8eA" id="6vWFNG2jB7H" role="lcghm">
+                  <property role="lacIc" value=" //1000 m -&gt; 30 pix" />
+                </node>
               </node>
+              <node concept="3clFbH" id="6vWFNG2jDJU" role="3cqZAp" />
             </node>
             <node concept="3clFbC" id="7goH6Gfm2vu" role="3eO9$A">
               <node concept="2OqwBi" id="7goH6Gfm2vv" role="3uHU7w">
@@ -2374,7 +2402,7 @@
                 <node concept="3clFbS" id="7goH6Gfmobf" role="3clFbx">
                   <node concept="lc7rE" id="7goH6Gfmobg" role="3cqZAp">
                     <node concept="la8eA" id="7goH6Gfmobh" role="lcghm">
-                      <property role="lacIc" value="((Drone)thisJoinPoint.getArgs()[0]).isOnWater()==true" />
+                      <property role="lacIc" value="((Drone)thisJoinPoint.getArgs()[0]).isOnWater() == true" />
                     </node>
                   </node>
                 </node>

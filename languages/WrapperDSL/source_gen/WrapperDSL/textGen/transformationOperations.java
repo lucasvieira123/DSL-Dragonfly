@@ -17,9 +17,6 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public abstract class transformationOperations {
   public static void whenToPointcut(SNode when, final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-
-
-
     if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.SafeLandingStateTriggerEvent$1E)) {
       tgs.append("    pointcut safeLanding(): call (* model.entity.drone.DroneBusinessObject.safeLanding(*));");
     } else if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.UAVManeuverDirectionTriggerEvent$MD)) {
@@ -40,7 +37,7 @@ public abstract class transformationOperations {
     }
 
     if (SPropertyOperations.getEnum(SLinkOperations.getTarget(then, LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045b44a3L, "WrapperDSL.structure.TypeOfAdaptationEnum"), 0x53be3ecc045b44a5L, "around")) {
-      tgs.append("boolean ");
+      tgs.append("    boolean ");
       tgs.append(SPropertyOperations.getEnum(SLinkOperations.getTarget(then, LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW).getName());
       tgs.append("():");
       tgs.append(call);
@@ -49,11 +46,14 @@ public abstract class transformationOperations {
     } else {
       tgs.append("    ");
       tgs.append(SPropertyOperations.getEnum(SLinkOperations.getTarget(then, LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW).getName());
-      tgs.append("():");
+      tgs.append("(): ");
       tgs.append(call);
       tgs.newLine();
     }
     tgs.append("            && if\n");
+    tgs.append("            (");
+    tgs.newLine();
+    tgs.append("            (((Drone)thisJoinPoint.getArgs()[0]).getWrapperId()== )\n            &&\n");
   }
   public static void printExceptionalScenarioInLog(SNode exceptionalScenario, final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
@@ -69,10 +69,10 @@ public abstract class transformationOperations {
   public static void transformOperator(String operator, final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     switch (operator) {
-      case "is":
+      case "equal":
         tgs.append("==");
         break;
-      case "not is":
+      case "different":
         tgs.append("!=");
     }
   }

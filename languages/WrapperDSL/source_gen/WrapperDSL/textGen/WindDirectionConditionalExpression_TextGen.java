@@ -13,10 +13,11 @@ public class WindDirectionConditionalExpression_TextGen extends TextGenDescripto
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("((Drone)thisJoinPoint.getArgs()[0]).getWindDirection()");
+    tgs.append("            (((Drone)thisJoinPoint.getArgs()[0]).getWindDirection() ");
     transformationOperations.transformOperator(SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.operator$X1Ne).getName(), ctx);
-    tgs.append("DirectionEnum.");
+    tgs.append(" DirectionEnum.");
     tgs.append(SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.value$Bl0_).toString().toUpperCase());
+    tgs.append(")");
   }
 
   private static final class PROPS {

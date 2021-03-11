@@ -132,7 +132,7 @@
     </language>
   </registry>
   <node concept="1nTbkf" id="17uiePtfG8u">
-    <property role="TrG5h" value="Keepflying" />
+    <property role="TrG5h" value="KeepFlying" />
     <node concept="1nTbk6" id="17uiePtfG8v" role="1nTbk1">
       <node concept="3Em$gh" id="17uiePtjCfN" role="1nTnJQ">
         <property role="3EnToj" value="5eYfGK4nkaD/and" />
@@ -180,7 +180,7 @@
     </node>
   </node>
   <node concept="1nTbkf" id="17uiePtrX1v">
-    <property role="TrG5h" value="Move Aside" />
+    <property role="TrG5h" value="MoveAside" />
     <node concept="1nTbk6" id="17uiePtrX1w" role="1nTbk1">
       <node concept="3Em$gh" id="17uiePtrX1B" role="1nTnJQ">
         <property role="3EnToj" value="5eYfGK4nkaD/and" />

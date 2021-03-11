@@ -32,7 +32,7 @@ public class While_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     tgs.append("            }");
     tgs.newLine();
-    tgs.append("    };");
+    tgs.append("        };");
     tgs.newLine();
   }
 

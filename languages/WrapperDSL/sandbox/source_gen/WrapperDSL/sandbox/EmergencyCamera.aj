@@ -21,24 +21,22 @@ import view.drone.*;
 //IMPORTS//
 
 public aspect EmergencyCamera{
-private boolean alreadyExecuting = false;
-pointcut safeLanding(): call (* model.entity.drone.DroneBusinessObject.safeLanding(*));
-after():safeLanding()
-&&
-if
+    private boolean alreadyExecuting = false;
+    pointcut safeLanding(): call (* model.entity.drone.DroneBusinessObject.safeLanding(*));
+    after(): safeLanding()
+            && if
 GPSStateConditionalExpression
-{
-helperCamera(thisJoinPoint);
-}
-public void helperCamera(JoinPoint thisJoinPoint)
-{
-Drone drone = (Drone) thisJoinPoint.getArgs()[0];
+            {
+        helperCamera(thisJoinPoint);
+    }
 
-System.out.println("Drone["+drone.getLabel()+"] "+"EmergencyCamera");
-LoggerController.getInstance().print("Drone["+drone.getLabel()+"] EmergencyCamera");
+    public void helperCamera(JoinPoint thisJoinPoint){
+        Drone drone = (Drone) thisJoinPoint.getArgs()[0];
+
+        System.out.println("Drone["+drone.getLabel()+"] "+"EmergencyCamera");
+        LoggerController.getInstance().print("Drone["+drone.getLabel()+"] EmergencyCamera");
 
 CameraStateCommandExpressionGimbalStateCommandeExpressionEnergySavingModeStateCommandExpressionif(ComparativeRelativeDistanceConditionalExpression){
-<!TextGen not found for 'WrapperDSL.structure.GimbalRotationCommandExpression'!>
+GimbalRotationCommandExpression
 }else{
-<!TextGen not found for 'WrapperDSL.structure.GimbalRotationCommandExpression'!>}}
-}
+GimbalRotationCommandExpression}}

@@ -596,13 +596,13 @@
     </node>
     <node concept="25R33" id="5fwjzFJ5$ch" role="25R1y">
       <property role="3tVfz5" value="6043916714957488913" />
-      <property role="1L1pqM" value="≥" />
       <property role="TrG5h" value="greater_than_or_equal_to" />
+      <property role="1L1pqM" value="&gt;=" />
     </node>
     <node concept="25R33" id="5fwjzFJ5$ci" role="25R1y">
       <property role="3tVfz5" value="6043916714957488914" />
-      <property role="1L1pqM" value="≤" />
       <property role="TrG5h" value="less_than_or_equal_to" />
+      <property role="1L1pqM" value="&lt;=" />
     </node>
   </node>
   <node concept="1TIwiD" id="5fwjzFJ5$cw">

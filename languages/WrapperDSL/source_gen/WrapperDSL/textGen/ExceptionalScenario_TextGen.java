@@ -48,7 +48,7 @@ public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
     tgs.popTextArea();
     tgs.pushTextArea("HEADER");
     tgs.indent();
-    tgs.append("    private boolean alreadyExecuting = false;");
+    tgs.append("    private boolean alreadyExecuting;");
     tgs.newLine();
     tgs.popTextArea();
     tgs.pushTextArea("pointcut");
@@ -63,6 +63,10 @@ public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
     tgs.append("\n");
     tgs.popTextArea();
     tgs.pushTextArea("advice");
+    tgs.append("        )");
+    tgs.newLine();
+    tgs.popTextArea();
+    tgs.pushTextArea("advice");
     tgs.append("            {\n");
     tgs.popTextArea();
     tgs.pushTextArea("advice");
@@ -72,7 +76,7 @@ public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
     tgs.popTextArea();
     if (SPropertyOperations.getEnum(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045b44a3L, "WrapperDSL.structure.TypeOfAdaptationEnum"), 0x53be3ecc045b44a5L, "around")) {
       tgs.pushTextArea("advice");
-      tgs.append("return false;");
+      tgs.append("        return false;");
       tgs.newLine();
       tgs.popTextArea();
     }
@@ -103,7 +107,11 @@ public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
     }
     tgs.popTextArea();
     tgs.pushTextArea("methodAdvice");
-    tgs.append("}\n");
+    tgs.append("    }\n");
+    tgs.popTextArea();
+    tgs.pushTextArea("methodAdvice");
+    tgs.append("}");
+    tgs.newLine();
     tgs.popTextArea();
 
   }
