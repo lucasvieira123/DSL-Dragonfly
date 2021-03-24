@@ -5,11 +5,25 @@ package WrapperDSL.textGen;
 import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public class GimbalStateCommandeExpression_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("GimbalStateCommandeExpression");
+    if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.controlSwitch$PwAS) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef1647f8L, "WrapperDSL.structure.ControlSwitchEnum"), 0x53e04e3aef1647f9L, "AUTOMATIC")) {
+      if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.state$Px4U) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef164811L, "WrapperDSL.structure.GimbalStateSetEnum"), 0x53e04e3aef164812L, "START")) {
+        tgs.append("        drone.setGambialState(GambialStateEnum.ON);");
+        tgs.newLine();
+      }
+    }
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty controlSwitch$PwAS = MetaAdapterFactory.getProperty(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x7fd8262c202614e1L, 0x7fd8262c202614e2L, "controlSwitch");
+    /*package*/ static final SProperty state$Px4U = MetaAdapterFactory.getProperty(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x7fd8262c202614e1L, 0x7fd8262c202614e4L, "state");
   }
 }

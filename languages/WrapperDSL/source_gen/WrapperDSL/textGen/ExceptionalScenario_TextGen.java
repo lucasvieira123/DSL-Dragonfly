@@ -9,10 +9,12 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.language.SProperty;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
   @Override
@@ -46,11 +48,6 @@ public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$MnvL));
     tgs.append("{\n");
     tgs.popTextArea();
-    tgs.pushTextArea("HEADER");
-    tgs.indent();
-    tgs.append("    private boolean alreadyExecuting;");
-    tgs.newLine();
-    tgs.popTextArea();
     tgs.pushTextArea("pointcut");
     transformationOperations.whenToPointcut(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.when$sVSo), ctx);
     tgs.append("\n");
@@ -75,10 +72,12 @@ public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
     tgs.append("(thisJoinPoint);\n");
     tgs.popTextArea();
     if (SPropertyOperations.getEnum(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045b44a3L, "WrapperDSL.structure.TypeOfAdaptationEnum"), 0x53be3ecc045b44a5L, "around")) {
-      tgs.pushTextArea("advice");
-      tgs.append("        return false;");
-      tgs.newLine();
-      tgs.popTextArea();
+      if (!(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.when$sVSo), LINKS.event$iUC1), CONCEPTS.ReturnToHomeStateTriggerEvent$G))) {
+        tgs.pushTextArea("advice");
+        tgs.append("        return false;");
+        tgs.newLine();
+        tgs.popTextArea();
+      }
     }
     tgs.pushTextArea("advice");
     tgs.append("    }\n");
@@ -102,12 +101,19 @@ public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     tgs.popTextArea();
     tgs.pushTextArea("methodAdvice");
+    transformationOperations.stopWatch(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.when$sVSo), ctx);
+    tgs.popTextArea();
+    tgs.pushTextArea("methodAdvice");
     for (SNode item : SLinkOperations.getChildren(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), LINKS.adaptiveBehavior$h_UM), LINKS.adaptationScript$n8CY), LINKS.body$om_S)) {
       tgs.appendNode(item);
     }
     tgs.popTextArea();
     tgs.pushTextArea("methodAdvice");
+    transformationOperations.conditionStop(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.when$sVSo), ctx);
+    tgs.popTextArea();
+    tgs.pushTextArea("methodAdvice");
     tgs.append("    }\n");
+    tgs.newLine();
     tgs.popTextArea();
     tgs.pushTextArea("methodAdvice");
     tgs.append("}");
@@ -127,7 +133,12 @@ public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
     /*package*/ static final SContainmentLink given$sVqm = MetaAdapterFactory.getContainmentLink(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045a8bc3L, 0x53be3ecc045a8bcdL, "given");
     /*package*/ static final SContainmentLink adaptiveBehavior$h_UM = MetaAdapterFactory.getContainmentLink(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045a8bccL, 0x53be3ecc045b45a9L, "adaptiveBehavior");
     /*package*/ static final SReferenceLink adaptationScriptName$h86n = MetaAdapterFactory.getReferenceLink(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x4cdb8f81da5c7de7L, 0x4cdb8f81da5c7df2L, "adaptationScriptName");
+    /*package*/ static final SContainmentLink event$iUC1 = MetaAdapterFactory.getContainmentLink(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045a8bcbL, 0x4cdb8f81da5c7dbcL, "event");
     /*package*/ static final SContainmentLink adaptationScript$n8CY = MetaAdapterFactory.getContainmentLink(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x4cdb8f81da5c7de7L, 0x4cdb8f81da5c7e5cL, "adaptationScript");
     /*package*/ static final SContainmentLink body$om_S = MetaAdapterFactory.getContainmentLink(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc046e0b54L, 0x53be3ecc0480a64aL, "body");
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept ReturnToHomeStateTriggerEvent$G = MetaAdapterFactory.getConcept(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x341ddc0f5796cbb2L, "WrapperDSL.structure.ReturnToHomeStateTriggerEvent");
   }
 }

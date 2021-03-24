@@ -16,7 +16,7 @@ public class EnumerationDescriptor_GeneralOperatorEnum extends EnumerationDescri
   }
 
   private final EnumerationDescriptor.MemberDescriptor myMember_iqual_0 = new EnumerationDescriptor.MemberDescriptor("iqual", "==", 0x53e04e3aef1642feL, "r:791815a7-51ee-4ec9-bcc3-2de9ba0316d3(WrapperDSL.structure)/6043916714957488894");
-  private final EnumerationDescriptor.MemberDescriptor myMember_not_equal_0 = new EnumerationDescriptor.MemberDescriptor("not_equal", "≠", 0x53e04e3aef1642ffL, "r:791815a7-51ee-4ec9-bcc3-2de9ba0316d3(WrapperDSL.structure)/6043916714957488895");
+  private final EnumerationDescriptor.MemberDescriptor myMember_not_equal_0 = new EnumerationDescriptor.MemberDescriptor("not_equal", "!=", 0x53e04e3aef1642ffL, "r:791815a7-51ee-4ec9-bcc3-2de9ba0316d3(WrapperDSL.structure)/6043916714957488895");
   private final EnumerationDescriptor.MemberDescriptor myMember_greater_than_0 = new EnumerationDescriptor.MemberDescriptor("greater_than", ">", 0x53e04e3aef16430fL, "r:791815a7-51ee-4ec9-bcc3-2de9ba0316d3(WrapperDSL.structure)/6043916714957488911");
   private final EnumerationDescriptor.MemberDescriptor myMember_less_than_0 = new EnumerationDescriptor.MemberDescriptor("less_than", "<", 0x53e04e3aef164310L, "r:791815a7-51ee-4ec9-bcc3-2de9ba0316d3(WrapperDSL.structure)/6043916714957488912");
   private final EnumerationDescriptor.MemberDescriptor myMember_greater_than_or_equal_to_0 = new EnumerationDescriptor.MemberDescriptor("greater_than_or_equal_to", ">=", 0x53e04e3aef164311L, "r:791815a7-51ee-4ec9-bcc3-2de9ba0316d3(WrapperDSL.structure)/6043916714957488913");

@@ -5,11 +5,26 @@ package WrapperDSL.textGen;
 import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public class GimbalRotationCommandExpression_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("GimbalRotationCommandExpression");
+    if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.axes$dMZE) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef1646a4L, "WrapperDSL.structure.AxesEnum"), 0x53e04e3aef1646a9L, "YAM")) {
+      if (SPropertyOperations.getInteger(ctx.getPrimaryInput(), PROPS.value$wU$_) == 90) {
+        tgs.append("            drone.setGambialState(GambialStateEnum.WEST);");
+      } else if (SPropertyOperations.getInteger(ctx.getPrimaryInput(), PROPS.value$wU$_) == 270) {
+        tgs.append("            drone.setGambialState(GambialStateEnum.EAST);");
+      }
+    }
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty axes$dMZE = MetaAdapterFactory.getProperty(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x802ab50185ec9d9L, 0x7fd8262c2026151eL, "axes");
+    /*package*/ static final SProperty value$wU$_ = MetaAdapterFactory.getProperty(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x802ab50185ec9d9L, 0x7fd8262c20261151L, "value");
   }
 }

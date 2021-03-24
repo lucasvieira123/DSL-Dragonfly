@@ -10,6 +10,7 @@ public class CameraStateCommandExpression_TextGen extends TextGenDescriptorBase 
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("CameraStateCommandExpression");
+    tgs.append("        drone.setCameraState(CameraStateEnum.ON);");
+    tgs.newLine();
   }
 }

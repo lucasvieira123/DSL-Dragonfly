@@ -5,11 +5,22 @@ package WrapperDSL.textGen;
 import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public class EnergySavingModeStateCommandExpression_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("EnergySavingModeStateCommandExpression");
+    if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.state$wMMD) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef164784L, "WrapperDSL.structure.EnergySavingModeStateSetEnum"), 0x53e04e3aef164786L, "START")) {
+      tgs.append("        drone.setEconomyMode(true);\n");
+      tgs.newLine();
+    }
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty state$wMMD = MetaAdapterFactory.getProperty(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x802ab50185ec9d4L, 0x7fd8262c20261145L, "state");
   }
 }

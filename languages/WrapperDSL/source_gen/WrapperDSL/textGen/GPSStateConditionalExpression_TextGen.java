@@ -5,11 +5,32 @@ package WrapperDSL.textGen;
 import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public class GPSStateConditionalExpression_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("GPSStateConditionalExpression");
+    if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.state$3jWA) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef164882L, "WrapperDSL.structure.GPSStateGetEnum"), 0x53e04e3aef164884L, "ERROR")) {
+      if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.operator$3jH_) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef1642e8L, "WrapperDSL.structure.EqualityOperatorEnum"), 0x53e04e3aef1642e9L, "iqual")) {
+        tgs.append("            (((Drone)thisJoinPoint.getArgs()[0]).getGpsState() == GPSStateEnum.FAILURE)");
+        tgs.newLine();
+      }
+    }
+
+    if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.state$3jWA) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef164882L, "WrapperDSL.structure.GPSStateGetEnum"), 0x53e04e3aef16488bL, "DEACTIVATED")) {
+      if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.operator$3jH_) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef1642e8L, "WrapperDSL.structure.EqualityOperatorEnum"), 0x53e04e3aef1642e9L, "iqual")) {
+        tgs.append("            (((Drone)thisJoinPoint.getArgs()[0]).getGpsState() == GPSStateEnum.FAILURE)");
+        tgs.newLine();
+      }
+    }
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty operator$3jH_ = MetaAdapterFactory.getProperty(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef164335L, 0x7fd8262c2025d6daL, "operator");
+    /*package*/ static final SProperty state$3jWA = MetaAdapterFactory.getProperty(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef164335L, 0x7fd8262c2025d6dbL, "state");
   }
 }

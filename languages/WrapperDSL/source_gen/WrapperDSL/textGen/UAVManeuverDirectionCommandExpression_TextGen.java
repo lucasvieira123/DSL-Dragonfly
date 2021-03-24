@@ -5,11 +5,29 @@ package WrapperDSL.textGen;
 import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public class UAVManeuverDirectionCommandExpression_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("UAVManeuverDirectionCommandExpression");
+
+    if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.direction$$7nL) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x1053550ed8a37db5L, "WrapperDSL.structure.DirectionEnum"), 0x1053550ed8a37db6L, "NORTH")) {
+      tgs.append("                            DroneBusinessObject.getInstance().flyToDirection(drone, DirectionEnum.NORTH);\n");
+    } else if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.direction$$7nL) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x1053550ed8a37db5L, "WrapperDSL.structure.DirectionEnum"), 0x1053550ed8a37dbeL, "WEST")) {
+      tgs.append("                            DroneBusinessObject.getInstance().flyToDirection(drone,DirectionEnum.WEST);\n");
+    } else if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.direction$$7nL) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x1053550ed8a37db5L, "WrapperDSL.structure.DirectionEnum"), 0x1053550ed8a37db7L, "SOUTH")) {
+      tgs.append("                            DroneBusinessObject.getInstance().flyToDirection(drone,DirectionEnum.SOUTH);\n");
+    } else if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.direction$$7nL) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x1053550ed8a37db5L, "WrapperDSL.structure.DirectionEnum"), 0x1053550ed8a37dbaL, "EAST")) {
+      tgs.append("                            DroneBusinessObject.getInstance().flyToDirection(drone,DirectionEnum.EAST);\n");
+    }
+
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty direction$$7nL = MetaAdapterFactory.getProperty(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x802ab50185ec9c2L, 0x7fd8262c2026119eL, "direction");
   }
 }

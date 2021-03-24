@@ -21,11 +21,15 @@ import view.drone.*;
 //IMPORTS//
 
 public aspect EmergencyCamera{
-    private boolean alreadyExecuting = false;
+    private static boolean executingFrameWork;
     pointcut safeLanding(): call (* model.entity.drone.DroneBusinessObject.safeLanding(*));
     after(): safeLanding()
             && if
+            (
+            (((Drone)thisJoinPoint.getArgs()[0]).getWrapperId() == )
+            &&
 GPSStateConditionalExpression
+            )
             {
         helperCamera(thisJoinPoint);
     }
@@ -39,4 +43,6 @@ GPSStateConditionalExpression
 CameraStateCommandExpressionGimbalStateCommandeExpressionEnergySavingModeStateCommandExpressionif(ComparativeRelativeDistanceConditionalExpression){
 GimbalRotationCommandExpression
 }else{
-GimbalRotationCommandExpression}}
+GimbalRotationCommandExpression}    }
+
+}

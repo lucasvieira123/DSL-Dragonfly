@@ -20,9 +20,11 @@ public abstract class transformationOperations {
     if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.SafeLandingStateTriggerEvent$1E)) {
       tgs.append("    pointcut safeLanding(): call (* model.entity.drone.DroneBusinessObject.safeLanding(*));");
     } else if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.UAVManeuverDirectionTriggerEvent$MD)) {
-      tgs.append("    pointcut flyingToDirection(): call (* model.entity.drone.DroneBusinessObject.flyToDirection(*,*));");
+      tgs.append("    pointcut fireDetect(): call (* model.entity.drone.DroneBusinessObject.fireDetect(*));");
     } else if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.ReturnToHomeHomePointTriggerEvent$d)) {
       tgs.append("    pointcut flyingToDirection(): call (* model.entity.drone.DroneBusinessObject.flyToDirection(*,*));");
+    } else if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.ReturnToHomeStateTriggerEvent$G)) {
+      tgs.append("    pointcut returnToHome(): call (* model.entity.drone.DroneBusinessObject.returnToHome(*));");
     }
   }
   public static void whenAndThenToContitionalAdvice(SNode when, SNode then, final TextGenContext ctx) {
@@ -31,26 +33,51 @@ public abstract class transformationOperations {
     if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.SafeLandingStateTriggerEvent$1E)) {
       call = "safeLanding()";
     } else if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.UAVManeuverDirectionTriggerEvent$MD)) {
-      call = "flyingToDirection()";
+      call = "fireDetect()";
     } else if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.ReturnToHomeHomePointTriggerEvent$d)) {
       call = "flyingToDirection()";
+    } else if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.ReturnToHomeStateTriggerEvent$G)) {
+      call = "returnToHome()";
     }
 
     if (SPropertyOperations.getEnum(SLinkOperations.getTarget(then, LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045b44a3L, "WrapperDSL.structure.TypeOfAdaptationEnum"), 0x53be3ecc045b44a5L, "around")) {
-      tgs.append("    boolean ");
+      tgs.append("    Boolean ");
       tgs.append(SPropertyOperations.getEnum(SLinkOperations.getTarget(then, LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW).getName());
       tgs.append("():");
       tgs.append(call);
       tgs.newLine();
 
-    } else {
+    } else if (SPropertyOperations.getEnum(SLinkOperations.getTarget(then, LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045b44a3L, "WrapperDSL.structure.TypeOfAdaptationEnum"), 0x53be3ecc045b44a8L, "after")) {
+      if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.UAVManeuverDirectionTriggerEvent$MD)) {
+        tgs.pushTextArea("HEADER");
+        tgs.append("    private static boolean executingFrameWork;");
+        tgs.newLine();
+        tgs.popTextArea();
+      } else {
+        tgs.append(" ");
+        tgs.newLine();
+      }
+
       tgs.append("    ");
       tgs.append(SPropertyOperations.getEnum(SLinkOperations.getTarget(then, LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW).getName());
       tgs.append("(): ");
       tgs.append(call);
       tgs.newLine();
+
+    } else if (SPropertyOperations.getEnum(SLinkOperations.getTarget(then, LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045b44a3L, "WrapperDSL.structure.TypeOfAdaptationEnum"), 0x53be3ecc045b44a4L, "before")) {
+      tgs.pushTextArea("HEADER");
+      tgs.append("    private boolean alreadyExecuting;");
+      tgs.newLine();
+      tgs.popTextArea();
+      tgs.append("    ");
+      tgs.append(SPropertyOperations.getEnum(SLinkOperations.getTarget(then, LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW).getName());
+      tgs.append("(): ");
+      tgs.append(call);
+      tgs.newLine();
+
     }
-    tgs.append("            && if\n");
+    tgs.append("            && if");
+    tgs.newLine();
     tgs.append("            (");
     tgs.newLine();
     tgs.append("            (((Drone)thisJoinPoint.getArgs()[0]).getWrapperId() == )\n            &&\n");
@@ -65,6 +92,73 @@ public abstract class transformationOperations {
     tgs.append("        LoggerController.getInstance().print(\"Drone[\"+drone.getLabel()+\"] ");
     tgs.append(nameExceptionalScenario);
     tgs.append("\");\n");
+  }
+  public static void stopWatch(SNode then, SNode when, final TextGenContext ctx) {
+    final TextGenSupport tgs = new TextGenSupport(ctx);
+    if (SPropertyOperations.getEnum(SLinkOperations.getTarget(then, LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045b44a3L, "WrapperDSL.structure.TypeOfAdaptationEnum"), 0x53be3ecc045b44a8L, "after")) {
+      if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.UAVManeuverDirectionTriggerEvent$MD)) {
+        tgs.append("        executingFrameWork = true;\n");
+        tgs.newLine();
+        tgs.append("        int numberOfMoviments = 8;");
+        tgs.newLine();
+        tgs.append("        final int[] movimentCount = {1};");
+        tgs.newLine();
+
+        tgs.append("        new StopWatch(0,1000) {");
+        tgs.newLine();
+        tgs.append("            @Override");
+        tgs.newLine();
+        tgs.append("            public void task() {");
+        tgs.newLine();
+        tgs.append("                Platform.runLater(() -> {");
+        tgs.newLine();
+        tgs.append("                        switch (movimentCount[0]){");
+        tgs.newLine();
+
+      } else if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.SafeLandingStateTriggerEvent$1E)) {
+        tgs.append("        DroneView droneView = DroneController.getInstance().getDroneViewFrom(drone.getUniqueID());\n");
+        tgs.append("        CellView closerLandCellView = EnvironmentController.getInstance().getCloserLand(drone);\n");
+        tgs.newLine();
+      }
+
+    }
+  }
+  public static void conditionStop(SNode then, SNode when, final TextGenContext ctx) {
+    final TextGenSupport tgs = new TextGenSupport(ctx);
+    if (SPropertyOperations.getEnum(SLinkOperations.getTarget(then, LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045b44a3L, "WrapperDSL.structure.TypeOfAdaptationEnum"), 0x53be3ecc045b44a8L, "after")) {
+      if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.UAVManeuverDirectionTriggerEvent$MD)) {
+        tgs.append("                        }");
+        tgs.newLine();
+        tgs.append("                        movimentCount[0]++;");
+        tgs.newLine();
+        tgs.append("                });");
+        tgs.newLine();
+        tgs.append("            }\n");
+        tgs.newLine();
+
+        tgs.append("            @Override");
+        tgs.newLine();
+        tgs.append("            public boolean conditionStop() {");
+        tgs.newLine();
+        tgs.append("                if(movimentCount[0] > numberOfMoviments){");
+        tgs.newLine();
+        tgs.append("                    drone.setSmokeState(SmokeStateEnum.NOT_DETECTED);");
+        tgs.newLine();
+        tgs.append("                    return true;");
+        tgs.newLine();
+        tgs.append("                }");
+        tgs.newLine();
+        tgs.append("                return false;");
+        tgs.newLine();
+        tgs.append("            }");
+        tgs.newLine();
+        tgs.append("        };");
+        tgs.newLine();
+
+        tgs.append("        executingFrameWork = false;");
+        tgs.newLine();
+      }
+    }
   }
   public static void transformOperator(String operator, final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
@@ -86,6 +180,7 @@ public abstract class transformationOperations {
     /*package*/ static final SConcept SafeLandingStateTriggerEvent$1E = MetaAdapterFactory.getConcept(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x341ddc0f5796cbb4L, "WrapperDSL.structure.SafeLandingStateTriggerEvent");
     /*package*/ static final SConcept UAVManeuverDirectionTriggerEvent$MD = MetaAdapterFactory.getConcept(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x341ddc0f5796cbaaL, "WrapperDSL.structure.UAVManeuverDirectionTriggerEvent");
     /*package*/ static final SConcept ReturnToHomeHomePointTriggerEvent$d = MetaAdapterFactory.getConcept(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x341ddc0f5796cbb1L, "WrapperDSL.structure.ReturnToHomeHomePointTriggerEvent");
+    /*package*/ static final SConcept ReturnToHomeStateTriggerEvent$G = MetaAdapterFactory.getConcept(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x341ddc0f5796cbb2L, "WrapperDSL.structure.ReturnToHomeStateTriggerEvent");
   }
 
   private static final class PROPS {

@@ -15,10 +15,24 @@
     <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
-  <dependency className="WrapperDSL.textGen.ComparativeRelativeDistanceConditionalExpression_TextGen">
+  <dependency className="WrapperDSL.textGen.CameraStateConditionalExpression_TextGen">
     <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
     <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
+    <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
+  </dependency>
+  <dependency className="WrapperDSL.textGen.ComparativeRelativeDistanceConditionalExpression_TextGen">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
+    <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
   <dependency className="WrapperDSL.textGen.ConditionalExpression_TextGen">
@@ -39,8 +53,12 @@
   </dependency>
   <dependency className="WrapperDSL.textGen.EnergySavingModeStateCommandExpression_TextGen">
     <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
     <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
   <dependency className="WrapperDSL.textGen.ExceptionalScenario_TextGen">
@@ -48,10 +66,12 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
     <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SReferenceLink" />
@@ -70,16 +90,34 @@
     <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
-  <dependency className="WrapperDSL.textGen.GPSStateConditionalExpression_TextGen">
+  <dependency className="WrapperDSL.textGen.FlightControlStateConditionalExpression_TextGen">
     <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
     <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
+    <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
+  </dependency>
+  <dependency className="WrapperDSL.textGen.GPSStateConditionalExpression_TextGen">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
+    <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
   <dependency className="WrapperDSL.textGen.GimbalRotationCommandExpression_TextGen">
     <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
     <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
   <dependency className="WrapperDSL.textGen.GimbalRotationConditionalExpression_TextGen">
@@ -90,8 +128,12 @@
   </dependency>
   <dependency className="WrapperDSL.textGen.GimbalStateCommandeExpression_TextGen">
     <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
     <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
   <dependency className="WrapperDSL.textGen.Given_TextGen">
@@ -125,6 +167,16 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
+  <dependency className="WrapperDSL.textGen.ObstacleAvoidanceSensorStateConditionalExpression_TextGen">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
+    <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
+    <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
+  </dependency>
   <dependency className="WrapperDSL.textGen.RegionConditionalExpression_TextGen">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
@@ -142,16 +194,40 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
-  <dependency className="WrapperDSL.textGen.SafeLandingStateCommandExpression_TextGen">
+  <dependency className="WrapperDSL.textGen.ReturnToHomeStateConditionalExpression_TextGen">
     <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
     <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
+    <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
+  </dependency>
+  <dependency className="WrapperDSL.textGen.SafeLandingStateCommandExpression_TextGen">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
+    <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
   <dependency className="WrapperDSL.textGen.ScalarDistanceConditionalExpression_TextGen">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
     <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
+  </dependency>
+  <dependency className="WrapperDSL.textGen.SmokerDetectorResultConditionalExpression_TextGen">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
+    <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
   <dependency className="WrapperDSL.textGen.SmokerDetectorStateCommandExpression_TextGen">
@@ -164,6 +240,7 @@
     <classNode dependClassName="WrapperDSL.structure.LanguageConceptSwitch" />
     <classNode dependClassName="WrapperDSL.textGen.AdaptationScript_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.CameraStateCommandExpression_TextGen" />
+    <classNode dependClassName="WrapperDSL.textGen.CameraStateConditionalExpression_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.ComparativeRelativeDistanceConditionalExpression_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.ConditionalExpression_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.Else_TextGen" />
@@ -171,6 +248,7 @@
     <classNode dependClassName="WrapperDSL.textGen.ExceptionalScenario_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.Expression_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.FlightControlStateCommandExpression_TextGen" />
+    <classNode dependClassName="WrapperDSL.textGen.FlightControlStateConditionalExpression_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.GPSStateConditionalExpression_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.GimbalRotationCommandExpression_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.GimbalRotationConditionalExpression_TextGen" />
@@ -178,10 +256,13 @@
     <classNode dependClassName="WrapperDSL.textGen.Given_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.If_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.LogicalExpression_TextGen" />
+    <classNode dependClassName="WrapperDSL.textGen.ObstacleAvoidanceSensorStateConditionalExpression_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.RegionConditionalExpression_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.RelativeDistanceConditionalExpression_TextGen" />
+    <classNode dependClassName="WrapperDSL.textGen.ReturnToHomeStateConditionalExpression_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.SafeLandingStateCommandExpression_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.ScalarDistanceConditionalExpression_TextGen" />
+    <classNode dependClassName="WrapperDSL.textGen.SmokerDetectorResultConditionalExpression_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.SmokerDetectorStateCommandExpression_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.UAVManeuverDirectionCommandExpression_TextGen" />
     <classNode dependClassName="WrapperDSL.textGen.UAVManeuverDirectionToRegionCommandExpression_TextGen" />
@@ -208,8 +289,12 @@
   </dependency>
   <dependency className="WrapperDSL.textGen.UAVManeuverDirectionCommandExpression_TextGen">
     <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
     <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
   <dependency className="WrapperDSL.textGen.UAVManeuverDirectionToRegionCommandExpression_TextGen">
@@ -236,9 +321,11 @@
   <dependency className="WrapperDSL.textGen.While_TextGen">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
     <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />

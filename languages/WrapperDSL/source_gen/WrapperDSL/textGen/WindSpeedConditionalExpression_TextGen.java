@@ -14,9 +14,9 @@ public class WindSpeedConditionalExpression_TextGen extends TextGenDescriptorBas
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     int speedValue = SPropertyOperations.getInteger(ctx.getPrimaryInput(), PROPS.value$GYOy);
-    if (speedValue > 5) {
+    if (speedValue >= 5) {
       // strongWind 
-      tgs.append("            (((Drone)thisJoinPoint.getArgs()[0]).isStrongWind() == true)");
+      tgs.append("            (((Drone)thisJoinPoint.getArgs()[0]).isStrongWind())");
     } else {
       tgs.append("            (((Drone)thisJoinPoint.getArgs()[0]).isStrongWind() == false)");
     }

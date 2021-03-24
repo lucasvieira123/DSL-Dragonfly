@@ -32,6 +32,8 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
         return new AdaptationScript_TextGen();
       case LanguageConceptSwitch.CameraStateCommandExpression:
         return new CameraStateCommandExpression_TextGen();
+      case LanguageConceptSwitch.CameraStateConditionalExpression:
+        return new CameraStateConditionalExpression_TextGen();
       case LanguageConceptSwitch.ComparativeRelativeDistanceConditionalExpression:
         return new ComparativeRelativeDistanceConditionalExpression_TextGen();
       case LanguageConceptSwitch.ConditionalExpression:
@@ -46,6 +48,8 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
         return new Expression_TextGen();
       case LanguageConceptSwitch.FlightControlStateCommandExpression:
         return new FlightControlStateCommandExpression_TextGen();
+      case LanguageConceptSwitch.FlightControlStateConditionalExpression:
+        return new FlightControlStateConditionalExpression_TextGen();
       case LanguageConceptSwitch.GPSStateConditionalExpression:
         return new GPSStateConditionalExpression_TextGen();
       case LanguageConceptSwitch.GimbalRotationCommandExpression:
@@ -60,14 +64,20 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
         return new If_TextGen();
       case LanguageConceptSwitch.LogicalExpression:
         return new LogicalExpression_TextGen();
+      case LanguageConceptSwitch.ObstacleAvoidanceSensorStateConditionalExpression:
+        return new ObstacleAvoidanceSensorStateConditionalExpression_TextGen();
       case LanguageConceptSwitch.RegionConditionalExpression:
         return new RegionConditionalExpression_TextGen();
       case LanguageConceptSwitch.RelativeDistanceConditionalExpression:
         return new RelativeDistanceConditionalExpression_TextGen();
+      case LanguageConceptSwitch.ReturnToHomeStateConditionalExpression:
+        return new ReturnToHomeStateConditionalExpression_TextGen();
       case LanguageConceptSwitch.SafeLandingStateCommandExpression:
         return new SafeLandingStateCommandExpression_TextGen();
       case LanguageConceptSwitch.ScalarDistanceConditionalExpression:
         return new ScalarDistanceConditionalExpression_TextGen();
+      case LanguageConceptSwitch.SmokerDetectorResultConditionalExpression:
+        return new SmokerDetectorResultConditionalExpression_TextGen();
       case LanguageConceptSwitch.SmokerDetectorStateCommandExpression:
         return new SmokerDetectorStateCommandExpression_TextGen();
       case LanguageConceptSwitch.UAVManeuverDirectionCommandExpression:

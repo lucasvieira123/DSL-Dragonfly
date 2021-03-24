@@ -20,7 +20,9 @@ public class Else_TextGen extends TextGenDescriptorBase {
     for (SNode item : SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.body$ilKT)) {
       tgs.appendNode(item);
     }
-    tgs.append("}");
+    tgs.newLine();
+    tgs.append("        }");
+    tgs.newLine();
   }
 
   private static final class LINKS {

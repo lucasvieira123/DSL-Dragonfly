@@ -16,7 +16,7 @@ public class EnumerationDescriptor_EqualityOperatorEnum extends EnumerationDescr
   }
 
   private final EnumerationDescriptor.MemberDescriptor myMember_iqual_0 = new EnumerationDescriptor.MemberDescriptor("iqual", "==", 0x53e04e3aef1642e9L, "r:791815a7-51ee-4ec9-bcc3-2de9ba0316d3(WrapperDSL.structure)/6043916714957488873");
-  private final EnumerationDescriptor.MemberDescriptor myMember_not_equal_0 = new EnumerationDescriptor.MemberDescriptor("not_equal", "≠", 0x53e04e3aef1642eaL, "r:791815a7-51ee-4ec9-bcc3-2de9ba0316d3(WrapperDSL.structure)/6043916714957488874");
+  private final EnumerationDescriptor.MemberDescriptor myMember_not_equal_0 = new EnumerationDescriptor.MemberDescriptor("not_equal", "!=", 0x53e04e3aef1642eaL, "r:791815a7-51ee-4ec9-bcc3-2de9ba0316d3(WrapperDSL.structure)/6043916714957488874");
 
   private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef1642e8L, 0x53e04e3aef1642e9L, 0x53e04e3aef1642eaL);
   private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_iqual_0, myMember_not_equal_0);

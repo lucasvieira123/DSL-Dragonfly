@@ -5,11 +5,60 @@ package WrapperDSL.textGen;
 import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public class SafeLandingStateCommandExpression_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("SafeLandingStateCommandExpression");
+
+    if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.state$zZBL) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef1647a6L, "WrapperDSL.structure.SafeLandingStateSetEnum"), 0x53e04e3aef1647a7L, "START")) {
+      tgs.append("        //SafeLanding");
+      tgs.newLine();
+      tgs.append("        boolean safeLandingExecuted = DroneBusinessObject.safeLanding(drone);");
+      tgs.newLine();
+      tgs.append("        if(safeLandingExecuted){");
+      tgs.newLine();
+      tgs.append("            boolean landingExecuted = DroneBusinessObject.landing(drone);\n");
+      tgs.newLine();
+      tgs.append("            if(landingExecuted){\n");
+      tgs.newLine();
+      tgs.append("                boolean landedExecuted =  DroneBusinessObject.landed(drone);\n");
+      tgs.newLine();
+      tgs.append("                if(landedExecuted){\n");
+      tgs.newLine();
+      tgs.append("                    boolean shutDownExecuted = DroneBusinessObject.shutDown(drone);\n");
+      tgs.newLine();
+      tgs.append("                    if(shutDownExecuted){\n");
+      tgs.newLine();
+      tgs.append("                        if (drone.isReturningToHome()) {");
+      tgs.newLine();
+      tgs.append("                            DroneBusinessObject.mustStopReturnToHomeStopWatch = false;");
+      tgs.newLine();
+      tgs.append("                        }");
+      tgs.newLine();
+      tgs.append("                        drone.setGoingAutomaticToDestiny(false);");
+      tgs.newLine();
+      tgs.append("                        drone.setGoingManualToDestiny(false);\n");
+      tgs.newLine();
+      tgs.append("                        DroneBusinessObject.checkAndPrintIfLostDrone(drone);");
+      tgs.newLine();
+      tgs.append("                    }\n");
+      tgs.newLine();
+      tgs.append("                }\n");
+      tgs.newLine();
+      tgs.append("            }\n");
+      tgs.newLine();
+      tgs.append("        }\n");
+      tgs.newLine();
+    }
+
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty state$zZBL = MetaAdapterFactory.getProperty(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x802ab50185ec9d5L, 0x7fd8262c20261190L, "state");
   }
 }
