@@ -101,15 +101,9 @@ public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     tgs.popTextArea();
     tgs.pushTextArea("methodAdvice");
-    transformationOperations.stopWatch(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.when$sVSo), ctx);
-    tgs.popTextArea();
-    tgs.pushTextArea("methodAdvice");
     for (SNode item : SLinkOperations.getChildren(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), LINKS.adaptiveBehavior$h_UM), LINKS.adaptationScript$n8CY), LINKS.body$om_S)) {
       tgs.appendNode(item);
     }
-    tgs.popTextArea();
-    tgs.pushTextArea("methodAdvice");
-    transformationOperations.conditionStop(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.when$sVSo), ctx);
     tgs.popTextArea();
     tgs.pushTextArea("methodAdvice");
     tgs.append("    }\n");

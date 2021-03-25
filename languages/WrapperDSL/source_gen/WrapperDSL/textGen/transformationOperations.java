@@ -97,23 +97,6 @@ public abstract class transformationOperations {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     if (SPropertyOperations.getEnum(SLinkOperations.getTarget(then, LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045b44a3L, "WrapperDSL.structure.TypeOfAdaptationEnum"), 0x53be3ecc045b44a8L, "after")) {
       if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.UAVManeuverDirectionTriggerEvent$MD)) {
-        tgs.append("        executingFrameWork = true;\n");
-        tgs.newLine();
-        tgs.append("        int numberOfMoviments = 8;");
-        tgs.newLine();
-        tgs.append("        final int[] movimentCount = {1};");
-        tgs.newLine();
-
-        tgs.append("        new StopWatch(0,1000) {");
-        tgs.newLine();
-        tgs.append("            @Override");
-        tgs.newLine();
-        tgs.append("            public void task() {");
-        tgs.newLine();
-        tgs.append("                Platform.runLater(() -> {");
-        tgs.newLine();
-        tgs.append("                        switch (movimentCount[0]){");
-        tgs.newLine();
 
       } else if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.SafeLandingStateTriggerEvent$1E)) {
         tgs.append("        DroneView droneView = DroneController.getInstance().getDroneViewFrom(drone.getUniqueID());\n");
