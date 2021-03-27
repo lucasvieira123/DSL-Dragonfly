@@ -134,8 +134,18 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
+        <property id="709746936026609031" name="linkId" index="3V$3ak" />
+        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
+      </concept>
+      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
+        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
     <language id="d5033cee-f632-44b6-b308-89d4fbde34ff" name="jetbrains.mps.build.startup">
@@ -172,9 +182,7 @@
         <reference id="6592112598314499066" name="target" index="m$_y1" />
       </concept>
       <concept id="3570488090019868065" name="jetbrains.mps.build.mps.structure.BuildMpsLayout_AutoPluginLayoutType" flags="ng" index="pUk6x" />
-      <concept id="1500819558095907805" name="jetbrains.mps.build.mps.structure.BuildMps_Group" flags="ng" index="2G$12M">
-        <child id="1500819558095907806" name="modules" index="2G$12L" />
-      </concept>
+      <concept id="1500819558095907805" name="jetbrains.mps.build.mps.structure.BuildMps_Group" flags="ng" index="2G$12M" />
       <concept id="868032131020265945" name="jetbrains.mps.build.mps.structure.BuildMPSPlugin" flags="ng" index="3b7kt6" />
       <concept id="5253498789149381388" name="jetbrains.mps.build.mps.structure.BuildMps_Module" flags="ng" index="3bQrTs">
         <child id="5253498789149547825" name="sources" index="3bR31x" />
@@ -527,71 +535,75 @@
     </node>
     <node concept="2G$12M" id="4M$NrCdKAtg" role="3989C9">
       <property role="TrG5h" value="DSL-Dragonfly" />
-      <node concept="1E1JtD" id="4M$NrCdKAtf" role="2G$12L">
-        <property role="BnDLt" value="true" />
-        <property role="TrG5h" value="WrapperDSL" />
-        <property role="3LESm3" value="3e1c68c4-ebe6-40bd-a27f-e74585aa2487" />
-        <node concept="55IIr" id="4M$NrCdKAta" role="3LF7KH">
-          <node concept="2Ry0Ak" id="4M$NrCdKAtb" role="iGT6I">
-            <property role="2Ry0Am" value="languages" />
-            <node concept="2Ry0Ak" id="4M$NrCdKAtc" role="2Ry0An">
-              <property role="2Ry0Am" value="WrapperDSL" />
-              <node concept="2Ry0Ak" id="4M$NrCdKAtd" role="2Ry0An">
-                <property role="2Ry0Am" value="WrapperDSL.mpl" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="1SiIV0" id="4M$NrCdKAui" role="3bR37C">
-          <node concept="3bR9La" id="4M$NrCdKAuj" role="1SiIV1">
-            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
-          </node>
-        </node>
-        <node concept="1BupzO" id="4M$NrCdKAuo" role="3bR31x">
-          <property role="3ZfqAx" value="models" />
-          <property role="1Hdu6h" value="true" />
-          <property role="1HemKv" value="true" />
-          <node concept="3LXTmp" id="4M$NrCdKAup" role="1HemKq">
-            <node concept="55IIr" id="4M$NrCdKAuk" role="3LXTmr">
-              <node concept="2Ry0Ak" id="4M$NrCdKAul" role="iGT6I">
-                <property role="2Ry0Am" value="languages" />
-                <node concept="2Ry0Ak" id="4M$NrCdKAum" role="2Ry0An">
-                  <property role="2Ry0Am" value="WrapperDSL" />
-                  <node concept="2Ry0Ak" id="4M$NrCdKAun" role="2Ry0An">
-                    <property role="2Ry0Am" value="models" />
-                  </node>
+      <node concept="1X3_iC" id="2Anhotrvn2" role="lGtFl">
+        <property role="3V$3am" value="modules" />
+        <property role="3V$3ak" value="0cf935df-4699-4e9c-a132-fa109541cba3/1500819558095907805/1500819558095907806" />
+        <node concept="1E1JtD" id="4M$NrCdKAtf" role="8Wnug">
+          <property role="TrG5h" value="W" />
+          <property role="3LESm3" value="3e1c68c4-ebe6-40bd-a27f-e74585aa2487" />
+          <property role="BnDLt" value="true" />
+          <node concept="55IIr" id="4M$NrCdKAta" role="3LF7KH">
+            <node concept="2Ry0Ak" id="4M$NrCdKAtb" role="iGT6I">
+              <property role="2Ry0Am" value="languages" />
+              <node concept="2Ry0Ak" id="4M$NrCdKAtc" role="2Ry0An">
+                <property role="2Ry0Am" value="WrapperDSL" />
+                <node concept="2Ry0Ak" id="4M$NrCdKAtd" role="2Ry0An">
+                  <property role="2Ry0Am" value="WrapperDSL.mpl" />
                 </node>
               </node>
             </node>
-            <node concept="3qWCbU" id="4M$NrCdKAuq" role="3LXTna">
-              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+          </node>
+          <node concept="1SiIV0" id="4M$NrCdKAui" role="3bR37C">
+            <node concept="3bR9La" id="4M$NrCdKAuj" role="1SiIV1">
+              <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
             </node>
           </node>
-        </node>
-        <node concept="1yeLz9" id="4M$NrCdKAur" role="1TViLv">
-          <property role="TrG5h" value="WrapperDSL#01" />
-          <property role="3LESm3" value="238c62fc-62ce-4621-abc6-7f5649b0315e" />
-          <node concept="1BupzO" id="4M$NrCdKAux" role="3bR31x">
-            <property role="3ZfqAx" value="generator/template" />
+          <node concept="1BupzO" id="4M$NrCdKAuo" role="3bR31x">
+            <property role="3ZfqAx" value="models" />
             <property role="1Hdu6h" value="true" />
             <property role="1HemKv" value="true" />
-            <node concept="3LXTmp" id="4M$NrCdKAuy" role="1HemKq">
-              <node concept="55IIr" id="4M$NrCdKAus" role="3LXTmr">
-                <node concept="2Ry0Ak" id="4M$NrCdKAut" role="iGT6I">
+            <node concept="3LXTmp" id="4M$NrCdKAup" role="1HemKq">
+              <node concept="55IIr" id="4M$NrCdKAuk" role="3LXTmr">
+                <node concept="2Ry0Ak" id="4M$NrCdKAul" role="iGT6I">
                   <property role="2Ry0Am" value="languages" />
-                  <node concept="2Ry0Ak" id="4M$NrCdKAuu" role="2Ry0An">
+                  <node concept="2Ry0Ak" id="4M$NrCdKAum" role="2Ry0An">
                     <property role="2Ry0Am" value="WrapperDSL" />
-                    <node concept="2Ry0Ak" id="4M$NrCdKAuv" role="2Ry0An">
-                      <property role="2Ry0Am" value="generator" />
-                      <node concept="2Ry0Ak" id="4M$NrCdKAuw" role="2Ry0An">
-                        <property role="2Ry0Am" value="template" />
-                      </node>
+                    <node concept="2Ry0Ak" id="4M$NrCdKAun" role="2Ry0An">
+                      <property role="2Ry0Am" value="models" />
                     </node>
                   </node>
                 </node>
               </node>
-              <node concept="3qWCbU" id="4M$NrCdKAuz" role="3LXTna">
+              <node concept="3qWCbU" id="4M$NrCdKAuq" role="3LXTna">
                 <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+              </node>
+            </node>
+          </node>
+          <node concept="1yeLz9" id="4M$NrCdKAur" role="1TViLv">
+            <property role="TrG5h" value="WrapperDSL#01" />
+            <property role="3LESm3" value="238c62fc-62ce-4621-abc6-7f5649b0315e" />
+            <node concept="1BupzO" id="4M$NrCdKAux" role="3bR31x">
+              <property role="3ZfqAx" value="generator/template" />
+              <property role="1Hdu6h" value="true" />
+              <property role="1HemKv" value="true" />
+              <node concept="3LXTmp" id="4M$NrCdKAuy" role="1HemKq">
+                <node concept="55IIr" id="4M$NrCdKAus" role="3LXTmr">
+                  <node concept="2Ry0Ak" id="4M$NrCdKAut" role="iGT6I">
+                    <property role="2Ry0Am" value="languages" />
+                    <node concept="2Ry0Ak" id="4M$NrCdKAuu" role="2Ry0An">
+                      <property role="2Ry0Am" value="WrapperDSL" />
+                      <node concept="2Ry0Ak" id="4M$NrCdKAuv" role="2Ry0An">
+                        <property role="2Ry0Am" value="generator" />
+                        <node concept="2Ry0Ak" id="4M$NrCdKAuw" role="2Ry0An">
+                          <property role="2Ry0Am" value="template" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3qWCbU" id="4M$NrCdKAuz" role="3LXTna">
+                  <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+                </node>
               </node>
             </node>
           </node>

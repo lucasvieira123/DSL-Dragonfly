@@ -10,7 +10,6 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.language.SProperty;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
@@ -68,7 +67,7 @@ public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
     tgs.popTextArea();
     tgs.pushTextArea("advice");
     tgs.append("        ");
-    tgs.appendNode(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), LINKS.adaptiveBehavior$h_UM), LINKS.adaptationScriptName$h86n));
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), LINKS.adaptiveBehavior$h_UM), LINKS.adaptationScriptName$h86n), PROPS.name$MnvL));
     tgs.append("(thisJoinPoint);\n");
     tgs.popTextArea();
     if (SPropertyOperations.getEnum(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045b44a3L, "WrapperDSL.structure.TypeOfAdaptationEnum"), 0x53be3ecc045b44a5L, "around")) {
@@ -86,7 +85,7 @@ public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
 
     tgs.pushTextArea("methodAdvice");
     tgs.append("    public void ");
-    tgs.appendNode(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), LINKS.adaptiveBehavior$h_UM), LINKS.adaptationScriptName$h86n));
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), LINKS.adaptiveBehavior$h_UM), LINKS.adaptationScriptName$h86n), PROPS.name$MnvL));
     tgs.append("(JoinPoint thisJoinPoint){");
     tgs.newLine();
     tgs.popTextArea();
@@ -101,9 +100,7 @@ public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     tgs.popTextArea();
     tgs.pushTextArea("methodAdvice");
-    for (SNode item : SLinkOperations.getChildren(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), LINKS.adaptiveBehavior$h_UM), LINKS.adaptationScript$n8CY), LINKS.body$om_S)) {
-      tgs.appendNode(item);
-    }
+    tgs.appendNode(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), LINKS.adaptiveBehavior$h_UM), LINKS.adaptationScript$n8CY));
     tgs.popTextArea();
     tgs.pushTextArea("methodAdvice");
     tgs.append("    }\n");
@@ -129,7 +126,6 @@ public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
     /*package*/ static final SReferenceLink adaptationScriptName$h86n = MetaAdapterFactory.getReferenceLink(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x4cdb8f81da5c7de7L, 0x4cdb8f81da5c7df2L, "adaptationScriptName");
     /*package*/ static final SContainmentLink event$iUC1 = MetaAdapterFactory.getContainmentLink(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045a8bcbL, 0x4cdb8f81da5c7dbcL, "event");
     /*package*/ static final SContainmentLink adaptationScript$n8CY = MetaAdapterFactory.getContainmentLink(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x4cdb8f81da5c7de7L, 0x4cdb8f81da5c7e5cL, "adaptationScript");
-    /*package*/ static final SContainmentLink body$om_S = MetaAdapterFactory.getContainmentLink(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc046e0b54L, 0x53be3ecc0480a64aL, "body");
   }
 
   private static final class CONCEPTS {

@@ -21,25 +21,25 @@ import view.drone.*;
 //IMPORTS//
 
 public aspect SwitchToManual{
-
-    boolean around():
+    pointcut returnToHome(): call (* model.entity.drone.DroneBusinessObject.returnToHome(*));
+    Boolean around():returnToHome()
             && if
             (
             (((Drone)thisJoinPoint.getArgs()[0]).getWrapperId() == )
             &&
             (
-GPSStateConditionalExpression
+            (((Drone)thisJoinPoint.getArgs()[0]).getGpsState() == GPSStateEnum.FAILURE)
+
             &&
             (
-ComparativeRelativeDistanceConditionalExpression
+((Drone)thisJoinPoint.getArgs()[0]).getDistanceDestiny()) < (((Drone)thisJoinPoint.getArgs()[0]).getDistanceSource())
             &&
-ConditionalExpression
+FlightControlStateConditionalExpression
             )
             )
             )
             {
         turnManual(thisJoinPoint);
-        return false;
     }
 
     public void turnManual(JoinPoint thisJoinPoint){

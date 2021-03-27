@@ -29,9 +29,13 @@ public aspect MonitorEnvironment{
             (((Drone)thisJoinPoint.getArgs()[0]).getWrapperId() == )
             &&
             (
-SmokerDetectorResultConditionalExpression
+            executingFrameWork == false
             &&
-ConditionalExpression
+            (
+            (((Drone)thisJoinPoint.getArgs()[0]).getCameraState() == CameraStateEnum.FAILURE)
+            ||
+            (((Drone)thisJoinPoint.getArgs()[0]).getCameraState() == CameraStateEnum.OFF)
+            )
             )
             )
             {
@@ -44,6 +48,14 @@ ConditionalExpression
         System.out.println("Drone["+drone.getLabel()+"] "+"MonitorEnvironment");
         LoggerController.getInstance().print("Drone["+drone.getLabel()+"] MonitorEnvironment");
 
-UAVManeuverDirectionCommandExpressionUAVManeuverDirectionCommandExpressionUAVManeuverDirectionCommandExpressionUAVManeuverDirectionCommandExpressionUAVManeuverDirectionCommandExpressionUAVManeuverDirectionCommandExpressionUAVManeuverDirectionCommandExpressionUAVManeuverDirectionCommandExpression    }
+                            DroneBusinessObject.getInstance().flyToDirection(drone, DirectionEnum.NORTH);
+                            DroneBusinessObject.getInstance().flyToDirection(drone,DirectionEnum.WEST);
+                            DroneBusinessObject.getInstance().flyToDirection(drone,DirectionEnum.SOUTH);
+                            DroneBusinessObject.getInstance().flyToDirection(drone,DirectionEnum.SOUTH);
+                            DroneBusinessObject.getInstance().flyToDirection(drone,DirectionEnum.EAST);
+                            DroneBusinessObject.getInstance().flyToDirection(drone,DirectionEnum.EAST);
+                            DroneBusinessObject.getInstance().flyToDirection(drone, DirectionEnum.NORTH);
+                            DroneBusinessObject.getInstance().flyToDirection(drone, DirectionEnum.NORTH);
+    }
 
 }

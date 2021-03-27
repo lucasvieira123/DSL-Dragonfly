@@ -21,14 +21,15 @@ import view.drone.*;
 //IMPORTS//
 
 public aspect EmergencyCamera{
-    private static boolean executingFrameWork;
     pointcut safeLanding(): call (* model.entity.drone.DroneBusinessObject.safeLanding(*));
+ 
     after(): safeLanding()
             && if
             (
             (((Drone)thisJoinPoint.getArgs()[0]).getWrapperId() == )
             &&
-GPSStateConditionalExpression
+            (((Drone)thisJoinPoint.getArgs()[0]).getGpsState() == GPSStateEnum.FAILURE)
+
             )
             {
         helperCamera(thisJoinPoint);
@@ -40,9 +41,15 @@ GPSStateConditionalExpression
         System.out.println("Drone["+drone.getLabel()+"] "+"EmergencyCamera");
         LoggerController.getInstance().print("Drone["+drone.getLabel()+"] EmergencyCamera");
 
-CameraStateCommandExpressionGimbalStateCommandeExpressionEnergySavingModeStateCommandExpressionif(ComparativeRelativeDistanceConditionalExpression){
-GimbalRotationCommandExpression
-}else{
-GimbalRotationCommandExpression}    }
+        drone.setCameraState(CameraStateEnum.ON);
+        drone.setGambialState(GambialStateEnum.ON);
+        drone.setEconomyMode(true);
+
+        if(drone.getDistanceSource() < drone.getDistanceDestiny()){
+            drone.setGambialState(GambialStateEnum.WEST);
+        }else{
+            drone.setGambialState(GambialStateEnum.EAST);
+        }
+    }
 
 }

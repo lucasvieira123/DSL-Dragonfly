@@ -22,7 +22,7 @@ import view.drone.*;
 
 public aspect SafeRTH{
     pointcut fireDetect(): call (* model.entity.drone.DroneBusinessObject.fireDetect(*));
-    boolean around():fireDetect()
+    Boolean around():fireDetect()
             && if
             (
             (((Drone)thisJoinPoint.getArgs()[0]).getWrapperId() == )
