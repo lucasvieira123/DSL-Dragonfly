@@ -15,11 +15,26 @@ public class FlightControlStateConditionalExpression_TextGen extends TextGenDesc
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.controlSwitch$U480) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef1647f8L, "WrapperDSL.structure.ControlSwitchEnum"), 0x53e04e3aef1647f9L, "AUTOMATIC")) {
-      tgs.append("FlightControlStateConditionalExpression");
+      tgs.append("            (((Drone)thisJoinPoint.getArgs()[0]).isAutomatic()");
     }
+
+    if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.operator$6x6R) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef1642e8L, "WrapperDSL.structure.EqualityOperatorEnum"), 0x53e04e3aef1642e9L, "iqual")) {
+      tgs.append(" == ");
+    } else {
+      tgs.append(" != ");
+    }
+
+    if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.state$ZgiM) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef16481aL, "WrapperDSL.structure.FlightControlStateGetEnum"), 0x53e04e3aef16481fL, "STARTED")) {
+      tgs.append("true)");
+    } else {
+      tgs.append("false");
+    }
+
   }
 
   private static final class PROPS {
     /*package*/ static final SProperty controlSwitch$U480 = MetaAdapterFactory.getProperty(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef16432aL, 0x341ddc0f5796d2bfL, "controlSwitch");
+    /*package*/ static final SProperty operator$6x6R = MetaAdapterFactory.getProperty(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef16432aL, 0x341ddc0f5796d2c1L, "operator");
+    /*package*/ static final SProperty state$ZgiM = MetaAdapterFactory.getProperty(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef16432aL, 0x1616c2c1144c9f00L, "state");
   }
 }

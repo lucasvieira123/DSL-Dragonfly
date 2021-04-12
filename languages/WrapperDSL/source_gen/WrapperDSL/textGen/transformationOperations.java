@@ -92,55 +92,15 @@ public abstract class transformationOperations {
     tgs.append("        LoggerController.getInstance().print(\"Drone[\"+drone.getLabel()+\"] ");
     tgs.append(nameExceptionalScenario);
     tgs.append("\");\n");
-  }
-  public static void stopWatch(SNode then, SNode when, final TextGenContext ctx) {
-    final TextGenSupport tgs = new TextGenSupport(ctx);
-    if (SPropertyOperations.getEnum(SLinkOperations.getTarget(then, LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045b44a3L, "WrapperDSL.structure.TypeOfAdaptationEnum"), 0x53be3ecc045b44a8L, "after")) {
-      if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.UAVManeuverDirectionTriggerEvent$MD)) {
+    tgs.newLine();
 
-      } else if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.SafeLandingStateTriggerEvent$1E)) {
+    if (SPropertyOperations.getEnum(SLinkOperations.getTarget(SLinkOperations.getTarget(exceptionalScenario, LINKS.then$t1wK), LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045b44a3L, "WrapperDSL.structure.TypeOfAdaptationEnum"), 0x53be3ecc045b44a8L, "after")) {
+      if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SLinkOperations.getTarget(exceptionalScenario, LINKS.when$sVSo), LINKS.event$iUC1), CONCEPTS.SafeLandingStateTriggerEvent$1E)) {
         tgs.append("        DroneView droneView = DroneController.getInstance().getDroneViewFrom(drone.getUniqueID());\n");
         tgs.append("        CellView closerLandCellView = EnvironmentController.getInstance().getCloserLand(drone);\n");
         tgs.newLine();
       }
 
-    }
-  }
-  public static void conditionStop(SNode then, SNode when, final TextGenContext ctx) {
-    final TextGenSupport tgs = new TextGenSupport(ctx);
-    if (SPropertyOperations.getEnum(SLinkOperations.getTarget(then, LINKS.adaptiveBehavior$h_UM), PROPS.typeOfAdaptation$h1KW) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045b44a3L, "WrapperDSL.structure.TypeOfAdaptationEnum"), 0x53be3ecc045b44a8L, "after")) {
-      if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(when, LINKS.event$iUC1), CONCEPTS.UAVManeuverDirectionTriggerEvent$MD)) {
-        tgs.append("                        }");
-        tgs.newLine();
-        tgs.append("                        movimentCount[0]++;");
-        tgs.newLine();
-        tgs.append("                });");
-        tgs.newLine();
-        tgs.append("            }\n");
-        tgs.newLine();
-
-        tgs.append("            @Override");
-        tgs.newLine();
-        tgs.append("            public boolean conditionStop() {");
-        tgs.newLine();
-        tgs.append("                if(movimentCount[0] > numberOfMoviments){");
-        tgs.newLine();
-        tgs.append("                    drone.setSmokeState(SmokeStateEnum.NOT_DETECTED);");
-        tgs.newLine();
-        tgs.append("                    return true;");
-        tgs.newLine();
-        tgs.append("                }");
-        tgs.newLine();
-        tgs.append("                return false;");
-        tgs.newLine();
-        tgs.append("            }");
-        tgs.newLine();
-        tgs.append("        };");
-        tgs.newLine();
-
-        tgs.append("        executingFrameWork = false;");
-        tgs.newLine();
-      }
     }
   }
   public static void transformOperator(String operator, final TextGenContext ctx) {
@@ -157,6 +117,8 @@ public abstract class transformationOperations {
   private static final class LINKS {
     /*package*/ static final SContainmentLink event$iUC1 = MetaAdapterFactory.getContainmentLink(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045a8bcbL, 0x4cdb8f81da5c7dbcL, "event");
     /*package*/ static final SContainmentLink adaptiveBehavior$h_UM = MetaAdapterFactory.getContainmentLink(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045a8bccL, 0x53be3ecc045b45a9L, "adaptiveBehavior");
+    /*package*/ static final SContainmentLink then$t1wK = MetaAdapterFactory.getContainmentLink(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045a8bc3L, 0x53be3ecc045a8bd2L, "then");
+    /*package*/ static final SContainmentLink when$sVSo = MetaAdapterFactory.getContainmentLink(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc045a8bc3L, 0x53be3ecc045a8bcfL, "when");
   }
 
   private static final class CONCEPTS {

@@ -17,14 +17,12 @@ public class GPSStateConditionalExpression_TextGen extends TextGenDescriptorBase
     if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.state$3jWA) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef164882L, "WrapperDSL.structure.GPSStateGetEnum"), 0x53e04e3aef164884L, "ERROR")) {
       if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.operator$3jH_) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef1642e8L, "WrapperDSL.structure.EqualityOperatorEnum"), 0x53e04e3aef1642e9L, "iqual")) {
         tgs.append("            (((Drone)thisJoinPoint.getArgs()[0]).getGpsState() == GPSStateEnum.FAILURE)");
-        tgs.newLine();
       }
     }
 
     if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.state$3jWA) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef164882L, "WrapperDSL.structure.GPSStateGetEnum"), 0x53e04e3aef16488bL, "DEACTIVATED")) {
       if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.operator$3jH_) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef1642e8L, "WrapperDSL.structure.EqualityOperatorEnum"), 0x53e04e3aef1642e9L, "iqual")) {
         tgs.append("            (((Drone)thisJoinPoint.getArgs()[0]).getGpsState() == GPSStateEnum.FAILURE)");
-        tgs.newLine();
       }
     }
   }

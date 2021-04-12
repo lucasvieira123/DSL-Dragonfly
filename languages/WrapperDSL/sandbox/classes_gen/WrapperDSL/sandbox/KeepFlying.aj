@@ -22,7 +22,7 @@ import view.drone.*;
 
 public aspect KeepFlying{
     pointcut safeLanding(): call (* model.entity.drone.DroneBusinessObject.safeLanding(*));
-    boolean around():safeLanding()
+    Boolean around():safeLanding()
             && if
             (
             (((Drone)thisJoinPoint.getArgs()[0]).getWrapperId() == )
@@ -48,6 +48,19 @@ public aspect KeepFlying{
         System.out.println("Drone["+drone.getLabel()+"] "+"KeepFlying");
         LoggerController.getInstance().print("Drone["+drone.getLabel()+"] KeepFlying");
 
-     }
+        new StopWatch(0,1000) {
+            @Override
+            public void task() {
+                Platform.runLater(() -> {
+        Drone drone = (Drone) thisJoinPoint.getArgs()[0];        System.out.println("Drone["+drone.getLabel()+"] "+"Keep Flying");        LoggerController.getInstance().print("Drone["+drone.getLabel()+"] "+"Keep Flying");
+                });
+
+            }
+            @Override
+            public boolean conditionStop() {
+                return !( );
+            }
+        };
+    }
 
 }

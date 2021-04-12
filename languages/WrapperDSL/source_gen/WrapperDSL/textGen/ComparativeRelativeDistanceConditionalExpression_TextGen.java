@@ -19,7 +19,7 @@ public class ComparativeRelativeDistanceConditionalExpression_TextGen extends Te
     }
 
     if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.relativePosition1$a1Yh) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x7970d3ea933fec04L, "WrapperDSL.structure.RelativePositionEnum"), 0x7970d3ea933fec05L, "DESTINATION")) {
-      tgs.append("((Drone)thisJoinPoint.getArgs()[0]).getDistanceDestiny())");
+      tgs.append("            ((Drone)thisJoinPoint.getArgs()[0]).getDistanceDestiny())");
     }
 
     if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.operator$a9uL) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef1642fcL, "WrapperDSL.structure.GeneralOperatorEnum"), 0x53e04e3aef164310L, "less_than")) {

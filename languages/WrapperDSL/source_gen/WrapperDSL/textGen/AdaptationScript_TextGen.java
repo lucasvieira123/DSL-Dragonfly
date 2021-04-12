@@ -5,62 +5,90 @@ package WrapperDSL.textGen;
 import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
-import java.util.List;
 import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.internal.collections.runtime.ListSequence;
-import java.util.ArrayList;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import org.jetbrains.mps.openapi.language.SConcept;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 public class AdaptationScript_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    List<SNode> concecutiveUAVManeuverDirectionCommandExpressionList = ListSequence.fromList(new ArrayList<SNode>());
-
     for (SNode stm : SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.body$om_S)) {
       if (SNodeOperations.isInstanceOf(stm, CONCEPTS.UAVManeuverDirectionCommandExpression$Qp)) {
-        ListSequence.fromList(concecutiveUAVManeuverDirectionCommandExpressionList).addElement((SNode) stm);
-      } else if ((boolean) ListSequence.fromList(concecutiveUAVManeuverDirectionCommandExpressionList).isEmpty() == false) {
-        int numberOfMoviments = ListSequence.fromList(concecutiveUAVManeuverDirectionCommandExpressionList).count();
-        tgs.append(" int numberOfMoviments = ");
+        int numberOfMoviments = ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.body$om_S)).count();
+        tgs.append("        executingFrameWork = true;");
+        tgs.newLine();
+        tgs.append("        int numberOfMoviments = ");
         tgs.append(String.valueOf(numberOfMoviments));
-        tgs.append(";/n");
-        tgs.append("final int[] movimentCount = {1};");
-        tgs.append("new StopWatch(0,1000) {");
-        tgs.append("@Override\n            public void task() {\n                Platform.runLater(() -> {\n                        switch (movimentCount[0]){");
+        tgs.append(";");
+        tgs.newLine();
+        tgs.append("        final int[] movimentCount = {1};");
+        tgs.newLine();
+        tgs.append("        new StopWatch(0,1000) {");
+        tgs.newLine();
+        tgs.append("            @Override\n            public void task() {\n                Platform.runLater(() -> {\n                        switch (movimentCount[0]){");
+        tgs.newLine();
+
+        // Casos do UAVManeuverDirectionCommandExpression 
         int index = 1;
-        for (SNode directionCommand : concecutiveUAVManeuverDirectionCommandExpressionList) {
-          tgs.append("case ");
+        for (SNode expression : SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.body$om_S)) {
+          tgs.append("                            case ");
           tgs.append(String.valueOf(index));
-          tgs.append(":");
-          tgs.appendNode(directionCommand);
-          tgs.append("break;");
+          tgs.append(": ");
+          tgs.appendNode(expression);
+          tgs.newLine();
+          tgs.append("                                break;");
+          tgs.newLine();
           index++;
         }
-        tgs.append(" }");
-        tgs.append("movimentCount[0]++;");
-        tgs.append(" });");
-        tgs.append(" }");
-        tgs.append("            @Override\n            public boolean conditionStop() {\n                if(movimentCount[0] > numberOfMoviments){\n                    drone.setSmokeState(SmokeStateEnum.NOT_DETECTED);\n                    return true;\n                }\n                return false;\n            }\n        };");
-        concecutiveUAVManeuverDirectionCommandExpressionList.clear();
+
+        tgs.append("                        }");
+        tgs.newLine();
+        tgs.append("                        movimentCount[0]++;");
+        tgs.newLine();
+        tgs.append("                });");
+        tgs.newLine();
+        tgs.append("            }");
+        tgs.newLine();
+
+        tgs.append("            @Override\n            public boolean conditionStop() {");
+        tgs.newLine();
+        tgs.append("                if(movimentCount[0] > numberOfMoviments){");
+        tgs.newLine();
+        tgs.append("                    drone.setSmokeState(SmokeStateEnum.NOT_DETECTED);");
+        tgs.newLine();
+        tgs.append("                    return true;");
+        tgs.newLine();
+        tgs.append("                }");
+        tgs.newLine();
+        tgs.append("                return false;");
+        tgs.newLine();
+        tgs.append("            }");
+        tgs.newLine();
+        tgs.append("        };");
+        tgs.newLine();
+
+        tgs.append("        executingFrameWork = false;");
+        tgs.newLine();
+
+        break;
+
       } else {
         tgs.appendNode(stm);
       }
-
-
     }
 
   }
 
-  private static final class CONCEPTS {
-    /*package*/ static final SConcept UAVManeuverDirectionCommandExpression$Qp = MetaAdapterFactory.getConcept(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x802ab50185ec9c2L, "WrapperDSL.structure.UAVManeuverDirectionCommandExpression");
-  }
-
   private static final class LINKS {
     /*package*/ static final SContainmentLink body$om_S = MetaAdapterFactory.getContainmentLink(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53be3ecc046e0b54L, 0x53be3ecc0480a64aL, "body");
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept UAVManeuverDirectionCommandExpression$Qp = MetaAdapterFactory.getConcept(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x802ab50185ec9c2L, "WrapperDSL.structure.UAVManeuverDirectionCommandExpression");
   }
 }

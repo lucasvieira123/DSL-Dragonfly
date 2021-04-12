@@ -16,13 +16,13 @@ public class UAVManeuverDirectionCommandExpression_TextGen extends TextGenDescri
     final TextGenSupport tgs = new TextGenSupport(ctx);
 
     if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.direction$$7nL) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x1053550ed8a37db5L, "WrapperDSL.structure.DirectionEnum"), 0x1053550ed8a37db6L, "NORTH")) {
-      tgs.append("                            DroneBusinessObject.getInstance().flyToDirection(drone, DirectionEnum.NORTH);\n");
+      tgs.append("DroneBusinessObject.getInstance().flyToDirection(drone, DirectionEnum.NORTH);");
     } else if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.direction$$7nL) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x1053550ed8a37db5L, "WrapperDSL.structure.DirectionEnum"), 0x1053550ed8a37dbeL, "WEST")) {
-      tgs.append("                            DroneBusinessObject.getInstance().flyToDirection(drone,DirectionEnum.WEST);\n");
+      tgs.append("DroneBusinessObject.getInstance().flyToDirection(drone,DirectionEnum.WEST);");
     } else if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.direction$$7nL) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x1053550ed8a37db5L, "WrapperDSL.structure.DirectionEnum"), 0x1053550ed8a37db7L, "SOUTH")) {
-      tgs.append("                            DroneBusinessObject.getInstance().flyToDirection(drone,DirectionEnum.SOUTH);\n");
+      tgs.append("DroneBusinessObject.getInstance().flyToDirection(drone,DirectionEnum.SOUTH);");
     } else if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.direction$$7nL) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x1053550ed8a37db5L, "WrapperDSL.structure.DirectionEnum"), 0x1053550ed8a37dbaL, "EAST")) {
-      tgs.append("                            DroneBusinessObject.getInstance().flyToDirection(drone,DirectionEnum.EAST);\n");
+      tgs.append("DroneBusinessObject.getInstance().flyToDirection(drone,DirectionEnum.EAST);");
     }
 
   }

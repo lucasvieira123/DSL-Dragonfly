@@ -99,15 +99,21 @@ public class ExceptionalScenario_TextGen extends TextGenDescriptorBase {
     transformationOperations.printExceptionalScenarioInLog(ctx.getPrimaryInput(), ctx);
     tgs.newLine();
     tgs.popTextArea();
-    tgs.pushTextArea("methodAdvice");
-    tgs.appendNode(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), LINKS.adaptiveBehavior$h_UM), LINKS.adaptationScript$n8CY));
-    tgs.popTextArea();
+
+    // O nome precisa ser obrigatoriamente "goDestination para que nesse if não seja impresso o while do KeepFlying 
+    if (!(SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), LINKS.adaptiveBehavior$h_UM), LINKS.adaptationScriptName$h86n), PROPS.name$MnvL).equals("goDestination"))) {
+      tgs.pushTextArea("methodAdvice");
+      tgs.appendNode(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.then$t1wK), LINKS.adaptiveBehavior$h_UM), LINKS.adaptationScript$n8CY));
+      tgs.popTextArea();
+    }
+
+
     tgs.pushTextArea("methodAdvice");
     tgs.append("    }\n");
     tgs.newLine();
     tgs.popTextArea();
     tgs.pushTextArea("methodAdvice");
-    tgs.append("}");
+    tgs.append("}\n");
     tgs.newLine();
     tgs.popTextArea();
 

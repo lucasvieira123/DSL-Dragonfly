@@ -14,12 +14,7 @@ public class UAVManeuverDirectionToRegionCommandExpression_TextGen extends TextG
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    String goDirection = SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.RegionDirection$K1to).toString();
-    if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.RegionDirection$K1to) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x7970d3ea933fec04L, "WrapperDSL.structure.RelativePositionEnum"), 0x7970d3ea933fec05L, "DESTINATION")) {
-      tgs.append("        Drone drone = (Drone) thisJoinPoint.getArgs()[0];");
-      tgs.append("        System.out.println(\"Drone[\"+drone.getLabel()+\"] \"+\"Keep Flying\");");
-      tgs.append("        LoggerController.getInstance().print(\"Drone[\"+drone.getLabel()+\"] \"+\"Keep Flying\");");
-    } else if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.RegionDirection$K1to) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x7970d3ea933fec04L, "WrapperDSL.structure.RelativePositionEnum"), 0x53e04e3aef1646b6L, "LAND")) {
+    if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.RegionDirection$K1to) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x7970d3ea933fec04L, "WrapperDSL.structure.RelativePositionEnum"), 0x53e04e3aef1646b6L, "LAND")) {
       tgs.append("                    DroneView droneView = DroneController.getInstance().getDroneViewFrom(drone.getUniqueID());\n");
       tgs.append("                    CellView destinationCellView = EnvironmentController.getInstance().getCloserLand(drone);\n");
       tgs.append("                    DirectionEnum goDirection = DroneBusinessObject.closeDirection(droneView.getCurrentCellView(), destinationCellView);\n");
@@ -29,7 +24,12 @@ public class UAVManeuverDirectionToRegionCommandExpression_TextGen extends TextG
       tgs.append("                    DroneBusinessObject.updateDistances(drone);\n");
       tgs.append("                    DroneBusinessObject.checkStatus(drone);\n");
       tgs.append("                    DroneBusinessObject.updateItIsOver(drone);\n");
+
+    } else if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.RegionDirection$K1to) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x7970d3ea933fec04L, "WrapperDSL.structure.RelativePositionEnum"), 0x7970d3ea933fec05L, "DESTINATION")) {
+      tgs.append(" ");
+      tgs.newLine();
     }
+
 
 
   }

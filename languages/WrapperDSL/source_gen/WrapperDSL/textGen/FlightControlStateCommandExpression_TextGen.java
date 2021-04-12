@@ -5,11 +5,30 @@ package WrapperDSL.textGen;
 import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public class FlightControlStateCommandExpression_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("FlightControlStateCommandExpression");
+
+    if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.switchControl$aozC) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef1647f8L, "WrapperDSL.structure.ControlSwitchEnum"), 0x53e04e3aef1647faL, "MANUAL")) {
+      tgs.append("        drone.setIsAutomatic(false);");
+      tgs.newLine();
+    }
+
+    if (SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.state$wOGH) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x53e04e3aef164832L, "WrapperDSL.structure.FlightControlStateSetEnum"), 0x53e04e3aef164833L, "START")) {
+      tgs.append("        DroneController.init(DroneKeyBoardController.class.getSimpleName());");
+      tgs.newLine();
+    }
+
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty switchControl$aozC = MetaAdapterFactory.getProperty(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x802ab50185ec9d8L, 0x7fd8262c202614c3L, "switchControl");
+    /*package*/ static final SProperty state$wOGH = MetaAdapterFactory.getProperty(0x3e1c68c4ebe640bdL, 0xa27fe74585aa2487L, 0x802ab50185ec9d8L, 0x7fd8262c2026114dL, "state");
   }
 }

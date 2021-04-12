@@ -16,6 +16,7 @@ public class While_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
+
     if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.condition$IZns), CONCEPTS.RelativeDistanceConditionalExpression$1N)) {
       tgs.append("        new StopWatch(0,1000) {\n            @Override\n            public void task() {\n                Platform.runLater(() -> {");
       tgs.newLine();
@@ -37,9 +38,12 @@ public class While_TextGen extends TextGenDescriptorBase {
       tgs.newLine();
       tgs.append("        };");
       tgs.newLine();
+
     } else {
       tgs.append(" ");
     }
+
+
   }
 
   private static final class LINKS {
