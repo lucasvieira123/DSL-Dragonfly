@@ -44,6 +44,7 @@ The generator performs the transformation process using the defined template by 
 
 ## Example Application
 
+https://cutt.ly/fjw07ws
 
 **Colocar aquela planilia do drive editável**
 tentar colocar secoes por links
